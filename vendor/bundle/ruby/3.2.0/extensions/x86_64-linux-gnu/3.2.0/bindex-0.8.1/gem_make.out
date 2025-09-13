@@ -1,0 +1,18 @@
+current directory: /home/runner/work/twinn/twinn/vendor/bundle/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+/usr/bin/ruby3.2 -I/usr/lib/ruby/vendor_ruby extconf.rb
+creating Makefile
+
+current directory: /home/runner/work/twinn/twinn/vendor/bundle/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250913-3610-z0oyeo sitelibdir\=./.gem.20250913-3610-z0oyeo clean
+
+current directory: /home/runner/work/twinn/twinn/vendor/bundle/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250913-3610-z0oyeo sitelibdir\=./.gem.20250913-3610-z0oyeo
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/runner/work/twinn/twinn/vendor/bundle/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250913-3610-z0oyeo sitelibdir\=./.gem.20250913-3610-z0oyeo install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20250913-3610-z0oyeo/skiptrace/internal
+
+current directory: /home/runner/work/twinn/twinn/vendor/bundle/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250913-3610-z0oyeo sitelibdir\=./.gem.20250913-3610-z0oyeo clean
