@@ -10,5 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 0) do
+ActiveRecord::Schema[8.0].define(version: 2025_09_13_160040) do
+  create_table "discussions", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "social_media_posts", force: :cascade do |t|
+    t.integer "topic_id", null: false
+    t.string "platform"
+    t.string "platform_post_id"
+    t.text "content"
+    t.datetime "posted_at"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["topic_id"], name: "index_social_media_posts_on_topic_id"
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.integer "discussion_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["discussion_id"], name: "index_topics_on_discussion_id"
+  end
+
+  add_foreign_key "social_media_posts", "topics"
+  add_foreign_key "topics", "discussions"
 end

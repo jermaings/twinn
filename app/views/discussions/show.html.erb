@@ -1,0 +1,63 @@
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div>
+    <h1><%= @discussion.title %></h1>
+    <span class="badge bg-<%= @discussion.status == 'active' ? 'success' : @discussion.status == 'draft' ? 'secondary' : 'warning' %>">
+      <%= @discussion.status.titleize %>
+    </span>
+  </div>
+  <div class="btn-group">
+    <%= link_to "Edit", edit_discussion_path(@discussion), class: "btn btn-outline-primary" %>
+    <%= link_to "Back", discussions_path, class: "btn btn-outline-secondary" %>
+  </div>
+</div>
+
+<% if @discussion.description.present? %>
+  <div class="card mb-4">
+    <div class="card-body">
+      <p class="card-text"><%= simple_format(@discussion.description) %></p>
+    </div>
+  </div>
+<% end %>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h2>Topics</h2>
+  <%= link_to "Add Topic", new_discussion_topic_path(@discussion), class: "btn btn-success" %>
+</div>
+
+<% if @topics.any? %>
+  <div class="row">
+    <% @topics.each do |topic| %>
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= link_to topic.title, [@discussion, topic], class: "text-decoration-none" %>
+            </h5>
+            <p class="card-text"><%= truncate(topic.description, length: 120) %></p>
+            
+            <% if topic.social_media_posts.any? %>
+              <div class="mb-2">
+                <small class="text-muted">Posted to:</small>
+                <% topic.posted_to_platforms.each do |platform| %>
+                  <span class="badge bg-info text-dark me-1"><%= platform.titleize %></span>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+          <div class="card-footer d-flex justify-content-between">
+            <%= link_to "View", [@discussion, topic], class: "btn btn-sm btn-outline-primary" %>
+            <small class="text-muted align-self-center">
+              <%= pluralize(topic.social_media_posts.count, 'post') %>
+            </small>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <div class="text-center py-5">
+    <h3 class="text-muted">No topics yet</h3>
+    <p class="text-muted">Add topics to this discussion to get started.</p>
+    <%= link_to "Add Topic", new_discussion_topic_path(@discussion), class: "btn btn-success" %>
+  </div>
+<% end %>

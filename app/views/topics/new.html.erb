@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><%= link_to "Discussions", discussions_path %></li>
+        <li class="breadcrumb-item"><%= link_to @discussion.title, @discussion %></li>
+        <li class="breadcrumb-item active" aria-current="page">New Topic</li>
+      </ol>
+    </nav>
+    
+    <h1>New Topic</h1>
+
+    <%= form_with model: [@discussion, @topic], local: true, class: "row g-3" do |form| %>
+      <% if @topic.errors.any? %>
+        <div class="alert alert-danger">
+          <h4><%= pluralize(@topic.errors.count, "error") %> prohibited this topic from being saved:</h4>
+          <ul class="mb-0">
+            <% @topic.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="col-12">
+        <%= form.label :title, class: "form-label" %>
+        <%= form.text_field :title, class: "form-control" %>
+      </div>
+
+      <div class="col-12">
+        <%= form.label :description, class: "form-label" %>
+        <%= form.text_area :description, rows: 8, class: "form-control" %>
+      </div>
+
+      <div class="col-12">
+        <div class="btn-group">
+          <%= form.submit "Create Topic", class: "btn btn-success" %>
+          <%= link_to "Cancel", @discussion, class: "btn btn-outline-secondary" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

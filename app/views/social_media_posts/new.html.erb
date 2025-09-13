@@ -1,0 +1,74 @@
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><%= link_to "Discussions", discussions_path %></li>
+        <li class="breadcrumb-item"><%= link_to @discussion.title, @discussion %></li>
+        <li class="breadcrumb-item"><%= link_to @topic.title, [@discussion, @topic] %></li>
+        <li class="breadcrumb-item active" aria-current="page">New Social Media Post</li>
+      </ol>
+    </nav>
+    
+    <h1>Create Social Media Post</h1>
+    <p class="text-muted">Create a custom post for social media platforms</p>
+
+    <%= form_with model: [@discussion, @topic, @social_media_post], local: true, class: "row g-3" do |form| %>
+      <% if @social_media_post.errors.any? %>
+        <div class="alert alert-danger">
+          <h4><%= pluralize(@social_media_post.errors.count, "error") %> prohibited this post from being saved:</h4>
+          <ul class="mb-0">
+            <% @social_media_post.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="col-12">
+        <%= form.label :platform, class: "form-label" %>
+        <%= form.select :platform, 
+            options_for_select(SocialMediaPost::PLATFORMS.map { |p| [p.titleize, p] }), 
+            { prompt: "Select a platform" }, { class: "form-select" } %>
+      </div>
+
+      <div class="col-12">
+        <%= form.label :content, class: "form-label" %>
+        <%= form.text_area :content, rows: 6, class: "form-control", 
+            placeholder: "Write your social media post content here..." %>
+        <div class="form-text">
+          <span id="character-count">0</span>/280 characters (Twitter limit)
+        </div>
+      </div>
+
+      <div class="col-12">
+        <%= form.label :status, class: "form-label" %>
+        <%= form.select :status, 
+            options_for_select([['Draft', 'draft'], ['Pending', 'pending'], ['Posted', 'posted']], 'draft'), 
+            {}, { class: "form-select" } %>
+      </div>
+
+      <div class="col-12">
+        <div class="btn-group">
+          <%= form.submit "Create Post", class: "btn btn-success" %>
+          <%= link_to "Cancel", [@discussion, @topic], class: "btn btn-outline-secondary" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const contentTextarea = document.querySelector('#social_media_post_content');
+    const characterCount = document.querySelector('#character-count');
+    
+    function updateCount() {
+      const count = contentTextarea.value.length;
+      characterCount.textContent = count;
+      characterCount.className = count > 280 ? 'text-danger' : count > 250 ? 'text-warning' : '';
+    }
+    
+    contentTextarea.addEventListener('input', updateCount);
+    updateCount(); // Initial count
+  });
+</script>

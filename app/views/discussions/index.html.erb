@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h1>Discussions</h1>
+  <%= link_to "New Discussion", new_discussion_path, class: "btn btn-primary" %>
+</div>
+
+<% if @discussions.any? %>
+  <div class="row">
+    <% @discussions.each do |discussion| %>
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= link_to discussion.title, discussion, class: "text-decoration-none" %>
+            </h5>
+            <p class="card-text"><%= truncate(discussion.description, length: 150) %></p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-<%= discussion.status == 'active' ? 'success' : discussion.status == 'draft' ? 'secondary' : 'warning' %>">
+                <%= discussion.status.titleize %>
+              </span>
+              <small class="text-muted">
+                <%= pluralize(discussion.topics.count, 'topic') %> • 
+                <%= time_ago_in_words(discussion.created_at) %> ago
+              </small>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="btn-group" role="group">
+              <%= link_to "View", discussion, class: "btn btn-sm btn-outline-primary" %>
+              <%= link_to "Edit", edit_discussion_path(discussion), class: "btn btn-sm btn-outline-secondary" %>
+              <%= link_to "Delete", discussion, method: :delete, 
+                  class: "btn btn-sm btn-outline-danger", 
+                  confirm: "Are you sure?", 
+                  data: { method: :delete } %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <div class="text-center py-5">
+    <h3 class="text-muted">No discussions yet</h3>
+    <p class="text-muted">Get started by creating your first discussion.</p>
+    <%= link_to "Create Discussion", new_discussion_path, class: "btn btn-primary" %>
+  </div>
+<% end %>
