@@ -1,0 +1,199 @@
+.main-title {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    width: 100%;
+    height: 100vh;
+}
+.container > footer {
+    margin-top: 1em;
+}
+.groupsite_blue {
+    color:#1A59CC;
+}
+.sticky-search-bar {
+    position: sticky !important;
+    top: 10px; /* Adjust this value based on your layout */
+    width: 100%;
+    padding: 0.5em;
+    background-color: white;
+    z-index: 1000;
+    border-bottom: 1px solid #ccc;
+}
+
+.highlight {
+    background-color: yellow;
+    transition: background-color 0.5s ease;
+  }
+.fooditems-container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    gap:1em; 
+    justify-content: space-around;
+    align-items: center;
+    margin: 0em;
+    padding:0em;
+    border: 0em;
+} 
+.fooditems-list {
+    min-width: fit-content;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: .3em;
+    }
+.add-to-order {
+    min-width: fit-content;
+    background-color: whitesmoke;
+    gap: .3em;
+}
+.category-button{
+    display: flex;
+    flex-flow:column wrap;
+    
+}
+.category-dropdown{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    background-color: wheat;
+}
+.category-dropdown:hover .category-button {
+  display: block; /* Shown on hover, pushes elements down */
+}
+.category-dropdown button:nth-of-type(1){
+    background-color: wheat;
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+}
+.category-dropdown button:nth-of-type(2){
+    background-color: wheat;
+    text-align: right;
+}
+.toggle-button {
+    gap: 3em;
+    width: 100%;
+    margin: .3em;
+}
+.data-control {
+    display: flex;
+    justify-content:center;
+}
+.hiding {
+    display:none !important;
+}
+.is-hidden {
+    max-width: fit-content;
+     display:none !important;
+}
+.hidden {
+     display:none !important;
+}
+.normal-background {
+  background-color: white; /* Default background color */
+}
+
+.somecontainer {
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.toggled-background {
+  background-color: green; /* Background color after toggling */
+}
+.fooditems-items {
+    background-color: blue;
+}
+button:active {
+    background-color: red;
+}
+.menu-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100% ;
+}
+.foodscontainer {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-cat {
+    display: flex;
+    flex-direction: row;
+}
+
+.dropdown {
+  width: fit-content;
+}
+
+.dropdown-trigger {
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  width: fit-content;
+  justify-content: space-between;
+}
+.example {
+    font-size: small;
+    background-color: greenyellow;
+    color: black;
+    max-width: fit-content !important;
+}
+
+.no-pmb {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+}
+
+@media screen and (orientation: portrait) {
+    .menu-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:  center;
+        margin: 0;
+        border: 0;
+        padding: 0;
+    }
+
+}
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */

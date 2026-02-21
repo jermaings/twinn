@@ -1,0 +1,32 @@
+<%= form_with(model: condiment_amt) do |form| %>
+  <% if condiment_amt.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(condiment_amt.errors.count, "error") %> prohibited this condiment_amt from being saved:</h2>
+
+      <ul>
+        <% condiment_amt.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div>
+    <%= form.label :small, style: "display: block" %>
+    <%= form.checkbox :small %>
+  </div>
+
+  <div>
+    <%= form.label :medium, style: "display: block" %>
+    <%= form.checkbox :medium %>
+  </div>
+
+  <div>
+    <%= form.label :large, style: "display: block" %>
+    <%= form.checkbox :large %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

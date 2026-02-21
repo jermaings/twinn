@@ -1,0 +1,16 @@
+<div id="<%= dom_id food %>" class="menu-items">
+  <p>
+    <%= food.category %>
+  </p>
+
+  <p>
+    <caption class="caption">
+      <%= link_to "Show this food", food, class:'button is-small has-background-grey-light has-text-info-dark' %>
+    </caption>
+    
+    <figure class="image is-128x128">
+      <%= image_tag(food.image) %>
+    </figure>
+  </p>
+
+</div>

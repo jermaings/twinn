@@ -1,0 +1,4215 @@
+div[style="padding-bottom:2em;"]
+  .subtitle.is-5
+    h3.subtitle.is-5
+      | FAQs Deep Dive
+    i
+      | How to do various tasks on the platform
+  - # Search
+  - # Search Results
+  / app/views/your_resource/index.html.erb
+  / app/views/your_resources/index.html.erb
+  label
+    |  Search what you are looking for 
+  div[data-controller="search"]
+    = form_with url: "#", method: :get, data: { action: "submit->search#search" }, class: 'sticky-search-bar' do |form|
+      = form.text_field :query, placeholder: "Search content...", data: { search_target: "query", action: "input->search#clearHighlight" }
+      = form.submit "Search", class: "btn btn-primary"
+    br
+    - # End Search
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Not receiving emails from your groupsite. 
+    ul
+      li[data-search-target="result"]
+        |  Please ensure that you are subscribed to a platform event to get emails. To check your subscriptions do the following once logged in. Scroll over the user icon in top right corner &gt; click My Subscriptions. Here you can toggle on and off things you would like emails for. 
+      li[data-search-target="result"]
+        |  If you have subscriptions turned on and are still not receiving emails, please contact 
+        a[href="mailto:support@groupsite.com"]
+          | support@groupsite.com
+        | . Also please ensure emails from groupsite.com are allowed through your network and/or email program. If emails are returned to our platform as undeliverable, emails will cease to be delivered to that email address. Contacting 
+        a[href="mailto:support@groupsite.com"]
+          | support@groupsite.com
+        |  can address this issue. 
+      li[data-search-target="result"]
+        |  If you are not receiving emails from a discussion forum topic. Please ensure you are following the topic. You can do so in two ways once logged in. 
+        ol
+          li[data-search-target="result"]
+            |  From the discussions feature 
+            ol
+              li
+                |  Click the 
+                b
+                  | "Discussions"
+                |  tab 
+              li
+                |  Select the 
+                b
+                  | discussion
+                |  the topic is under 
+              li
+                |  Select the desired 
+                b
+                  | topic
+              li
+                |  Click 
+                b
+                  | "Follow".
+                i[style="color:red;"]
+                  ul
+                    li
+                      |  Once a user is following the topic any replies submitted from the reply area, of that topic, will send an email with that reply
+                | . 
+              li
+                |  If a user is following a topic, and would like to stop receiving emails from that topic. Click 
+                b
+                  | "Unfollow"
+                | . 
+              li
+                |  If a user would like to receive emails for all new topics created in that discussion. Click 
+                b
+                  | "Subscribe" to the topic desired
+                | . 
+              li
+                |  To stop receiving emails for all new topics created in that discussion. Click 
+                b
+                  | "Unsubscribe" from the topic desired"
+                | . 
+              li
+                |  Please ensure your email program, and or network is not blocking, or allowing emails from groupsite.com. 
+    li[data-search-target="result"]
+      |  From the user account's subscription feature. 
+      ol
+        li
+          |  Scroll over the 
+          b
+            | user icon in the top right corner
+        li
+          |  click 
+          b
+            | "My Subscriptions"
+        li
+          |  toggle the 
+          b
+            | "Email Me"
+          |  to green for the desired topic. 
+
+          
+    li
+      |  If a member is not receiving emails from groupsite.com please contact 
+      a[href="mailto:support@groupsite.com"]
+        | support@groupsite.com
+      | . 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Changing or adding more than one email address 
+    br
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  To update an account's email address do the following two steps once logged in. 
+    ul
+      li[data-search-target="result"]
+        |  Step one 
+        ol
+          li
+            |  Scroll over the user 
+            b
+              | account icon in the top right corner
+          li
+            |  click 
+            b
+              | "My Account"
+          li
+            |  under 
+            i
+              | Logins/Emails
+            |  click 
+            b
+              | "+ Add Email Address"
+          li
+            |  enter the 
+            b
+              | new email address
+            |  in the pop up 
+          li
+            |  click 
+            b
+              | "Save"
+          li
+            |  Go to your new email address 
+          li
+            |  open email from mailer@groupsite.com 
+          li
+            |  click 
+            b
+              | "Verify My Email"
+      li[data-search-target="result"]
+        |  Step two - Once the email has been verified, that email address can need to be made the primary for the account before deleting an old email address. To do so do the following once the email address has been verified. 
+        ol
+          li
+            |  Scroll over the 
+            b
+              | user icon in the top right corner
+          li
+            |  click 
+            b
+              | "My Memberships"
+          li
+            |  select the 
+            b
+              | new email address from the dropdown "Email"
+            |  field under "Privacy and Contact Information" for that group. 
+            i[style="color:red;"]
+              | The primary email addresses can be different with each group.
+          li
+            |  enter the 
+            b
+              | new email address
+            |  in the pop up 
+
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Forgot password. 
+    ul
+      li[data-search-target="result"]
+        |  Go to the login page of your groupsite, and do the following 
+        ol
+          li
+            |  click 
+            b
+              | "forgot"
+            |  in the Password field 
+          li
+            |  Enter in your 
+            b
+              | email address
+            q[style="color:red;"]
+              | double check the spelling
+          li
+            |  click 
+            b
+              | "Submit"
+            | . This will send an email to the address entered with the subject of 
+            b
+              | "Change Your Password"
+          li
+            |  Open that email and click the button 
+            b
+              | "Change My Password"
+            | . 
+          li
+            |  Enter the new password in the 
+            b
+              | New Password 
+            |  and 
+            b
+              | Password Confirmation 
+            |  fields. 
+            em[style="color:red;"]
+              | Note:
+            |  These passwords must match. 
+          li
+            |  click 
+            b
+              | "Submit"
+      li[data-search-target="result"]
+        |  If you do not receive an email from the above steps please contact 
+
+
+        a[href="mailto:support@groupsite.com"]
+          | support@groupsite.com
+
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Uploading files 
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  Files can uploaded to the File Cabinet. Maximum file size is 175MB. Files can be uploaded to the File Cabinet through the drag and drop feature. By clicking and uploading a file from your computer, or by adding a file to a feature, such as the Dashboard. 
+    ul
+      li[data-search-target="result"]
+        |  Dragging and Dropping - Once logged into your group do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Files"
+          li
+            |  select a 
+            b
+              | folder
+          li
+            b
+              | drag
+            |  a file from your computer to the section 
+            b
+              | "DRAG OR CLICK HERE TO UPLOAD"
+            | . 
+      li[data-search-target="result"]
+        |  Single File Upload - Once logged into your group do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Files"
+          li
+            |  select a 
+            b
+              | folder
+          li
+            |  click 
+            b
+              | "DRAG OR CLICK HERE TO UPLOAD"
+          li
+            |  Select a 
+            b
+              | specific folder
+            |  to upload into 
+          li
+            |  click 
+            b
+              | "Upload File(s) into..."
+            | . 
+      li[data-search-target="result"]
+        |  When adding a single file on the various features, such as the Dashboard, Discussions, Media Gallery, Blogs, etc. a folder is created in the File Cabinet that is viewable only to managers, but can not be modified. These folders are used by the platform to display the files in its relative feature. The folders will have a key symbol on them and titled "User Created Content". 
+
+
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Uploading files to the Dashboard/Displaying Images and Videos. To use a file on the Dashboard from the File Cabinet, it must first be uploaded to the File Cabinet. 
+    br
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  The following dashboard modules can be used to upload links to preview files or display images and videos. The modules are Text Module, Free Text(HTML) Module, Media Gallery Module, and File Cabinet Files Module. 
+    ul
+      li[data-search-target="result"]
+        b[style="color:#1A59CC"]
+          |  Text Module 
+        ol
+          li
+            |  click 
+            b
+              | "Free Text"
+          li
+            |  under "Event Details" in the header click 
+            b
+              | one of last two icons
+            | . 
+            ul
+              li
+                |  The 
+                b
+                  | paper clip icon
+                |  will attach files from your computer and will be 
+                b
+                  | displayed as an image or video
+                |  on the dashboard. 
+              li
+                |  The last icon, the 
+                b
+                  | file browser
+                |  will choose a file from the group's File Cabinet, and will 
+                b
+                  | show a link
+                |  that once clicked will display the file. Files that can not be processed by the browser will need to be downloaded to be viewed completely. Such as Excel or Power Point. 
+      li[data-search-target="result"]
+        b[style="color:#1A59CC"]
+          | Free Text(HTML) Module
+        |  - Using this module you could control how the size of the image/s or Video/s are displayed. The address/URL to the image is needed. You would be able to provide a URL to image or use an image hosted in your group's file cabinet feature. To use an image from the file Cabinet, first obtain the URL to the file. Second, go to the dashboard and add a free text module. When adding the module, an HTML 
+        img
+        |  tag would need to be used. The following are steps to use an HTML img and video tag. 
+      ol
+        li[data-search-target="result"]
+          b
+            | Obtain the address of the file's location
+          | . To get a file's location from the group's file cabinet using the dashboard's Free Text(HTML) module do the following 
+          ol
+            li
+              |  Click 
+              b
+                | "File Cabinet"
+            li
+              |  find the 
+              b
+                | image
+              |  desired 
+            li
+              |  scroll over the 
+              b
+                | 3 horizontal dots
+              |  to the right of the file 
+            li
+              |  click 
+              b
+                | "Share"
+            li
+              b
+                | copy
+              |  the link. The copied link will be used as the source for displaying the file. 
+        li[data-search-target="result"]
+          |  Create Free Text(HTML) Module with &lt;img&gt; and &lt;video&gt; tags - 
+          ul
+            li[data-search-target="result"]
+              |  Once the URL is copied do the following. 
+              ol
+                li
+                  |  click 
+                  b
+                    | "Add Module"
+                  |  on the dashboard 
+                li
+                  |  click 
+                  b
+                    | "Free Text(HTML)"
+                li
+                  b
+                    | Add a title
+                  |  in the "Title" field 
+                li
+                  |  in the "HTML Code" field add an &lt;img&gt; or &lt;video&gt; tag and paste the 
+                  b
+                    | copied URL
+                  |  as as the src. In the following example paste the copied URL where it says 
+                  b
+                    i
+                      | COPIED_URL
+                  |  before 
+                  b
+                    | /preview
+                  | . 
+              - # &#60;img src="COPIED_URL/preview"&#62;.
+              div[style="display:flex;flex-flow:row wrap;" data-controller="clipboard"]
+                span[data-clipboard-target="source"]
+                  b
+                    |  Example 
+                    = @copy_image
+                button.button.example.is-primary[data-action="clipboard#copy"]
+                  |  Copy Example 
+                span.hidden[style="color:red;background-style:bold;" data-clipboard-target="message"]
+                  |  Copied! 
+            li[data-search-target="result"]
+              |  By adding a width and height attribute to the image would allow some control over the size of the image displayed. Place the copied file's URL between the parenthesis after src and add /preview. Example is as follows, &lt;img src="FILE'S_URL/preview" width="600" height="500"&gt;. Note the image will maintain the same aspect ratio. 
+            li[data-search-target="result"]
+              |  Some things to note. 
+              ul
+                li[data-search-target="result"]
+                  |  To display images and videos /preview needs to be added to the copied file's URL. The following example uses an img tag. Paste your file's URL/address, where it says COPIED_URL before /preview 
+                  - # &#60;img src="https://FILE_URL/files/1106075/preview"&#62;
+                  div[style="display:flex;flex-flow:row wrap;" data-controller="clipboard"]
+                    span[data-clipboard-target="source"]
+                      b
+                        |  Example 
+                        = @copy_image
+                    button.button.example.is-primary[data-action="clipboard#copy"]
+                      |  Copy Example 
+                    span.hidden[style="color:red;background-style:bold;" data-clipboard-target="message"]
+                      |  Copied! 
+                li[data-search-target="result"]
+                  |  The tag to use to display an image. In the following example paste the file's URL/address, where it says COPIED_URL before /preview. 
+                  div[style="display:flex;flex-flow:row wrap;" data-controller="clipboard"]
+                    span[data-clipboard-target="source"]
+                      b
+                        |  Example 
+                        = @copy_image
+                    button.button.example.is-primary[data-action="clipboard#copy"]
+                      |  Copy Example 
+                    span.hidden[style="color:red;background-style:bold;" data-clipboard-target="message"]
+                      |  Copied! 
+                  - # &#60;img src="FILE'S_URL/preview"&#62;
+                li[data-search-target="result"]
+                  |  The tag to use to display a video. In the following example paste the file's URL/address, where it says FILE_URL before /preview. 
+                  div[style="display:flex;flex-flow:row wrap;" data-controller="clipboard"]
+                    span[style="display:flex;flex-flow:row wrap;" data-clipboard-target="source"]
+                      b
+                        |  Example 
+                        = @copy_video
+                    button.button.example.is-primary[data-action="clipboard#copy"]
+                      |  Copy Example 
+                    span.hidden[style="color:red;background-style:bold;" data-clipboard-target="message"]
+                      |  Copied! 
+                  - # &#60;video width="1OO" height="100" controls&#62; &#60;source src="FILE'S_URL/preview"&#62; &#60;/video&#62;. Tag attributes can be adjusted as needed.
+                li[data-search-target="result"]
+                  |  width and height attributes can be used to adjust the sizing of the image or video. Example &lt;img src="FILE'S_URL/preview" width="50%" height="50%"&gt; 
+      li[data-search-target="result"]
+        b[style="color:#1A59CC"]
+          | Media Gallery Module
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+            |  &gt; click 
+            b
+              | "Media Gallery"
+          li
+            |  Add a 
+            b
+              | title
+            |  in the "Title" fieldIn 
+          li
+            |  The "Gallery" field dropdown select the 
+            b
+              | gallery desired
+            | . The collage of images will link to the gallery to view the images individually. 
+      li[data-search-target="result"]
+        b[style="color:#1A59CC"]
+          | File Cabinet Files Module
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "File Cabinet Files"
+          li
+            |  Add a 
+            b
+              | title
+            |  in the "Title" field 
+          li
+            |  In the "View" field dropdown select 
+            b
+              | "Select Files" or "Recent Files"
+            |  Recent files will display the last files chosen. The amount displayed is determined in the "# Of Items" field dropdown. When choosing 
+            b
+              | "Select Files"
+            |  click 
+            b
+              | "Choose Files"
+            |  button and select the 
+            b
+              | file/s
+            |  desired. The files will be displayed as a link. Once clicked the file will open up a page to display the file or give option to download(i.e. Excel, PowerPoint). 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Pricing 
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  There are two account types. Enterprise and regular. 
+    ol
+      li[data-search-target="result"]
+        |  Regular account the cost is $99 per month or $990 annually. This package includes 1 groupsite, 4 managers for the groupsite, unlimited users, 40GB of storage space, 4 subgroups. For an additional $10 a month or $100 yearly the following would be added to the groupsite 1 manager, 10GB of storage, and 1 subgroup. Upgrading one would upgrade all 3. Managers can add as many upgrades as needed. 
+      li[data-search-target="result"]
+        |  Enterprise account - Contact 
+        a[href="mailto:billing@groupsite.com"]
+          |  billing@groupsite.com
+        |  for a package that works for your needs. Enterprise accounts would include multiple groupsites under one account. More information can be found by going to groupsite.com/pricing and scrolling down to the section "Groupsite Enterprise Platform". Here you will see a list of full packages available and pricing. These packages can be downgraded and adjusted to fit your budget and needs. 
+    
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Payments/Billing/Contracts 
+    ul
+      li
+        |  Manual Billing and contractual options please contact 
+        a[href="mailto:billing@groupsite.com"]
+          | billing@groupsite.com 
+      li[data-search-target="result"]
+        |  Online payments can be done by doing the following once logged in as manager. 
+        ol
+          li
+            |  Click 
+            b
+              | "Group Settings"
+          li
+            |  click 
+            b
+              | "Account/Upgrade"
+          li
+            |  select a 
+            b
+              | plan
+          li
+            |  click 
+            b
+              | "Add Payment Method"
+          li
+            |  proceed to enter in the 
+            b
+              | payment information
+            | . Once completed the card will be processed when the free trial runs out. To cancel, contact 
+            a[href="mailto:billing@groupsite.com"]
+              | billing@groupsite.com
+            |  or 
+            a[href="mailto:support@groupsite.com"]
+              | support@groupsite.com
+            | . 
+      li[data-search-target="result"]
+        |  Updating payment information can be done by the following once logged in as a manager. 
+        ol
+          li
+            |  Click 
+            b
+              | "Group Settings"
+          li
+            |  click 
+            b
+              | "Account/Upgrade"
+          |  click 
+          b
+            | "Manage Your Billing"
+          li
+            |  To the right of the credit card information click the 
+            b
+              | "3 horizontal dots"
+            | . 
+          li
+            |  Click 
+            b
+              | "Make Default"
+            | . 
+          li
+            |  After, you will be able to delete the previous card that was the default payment method. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Cancelling a groupsite subscription 
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  To cancel a groupsite subscription do the following. 
+    ul
+      li
+        |  contact 
+        a[href="mailto:support@groupsite.com"]
+          | support@groupsite.com
+        | , or 
+        a[href="mailto:support@groupsite.com"]
+          | billing@groupsite.com
+        |  to inform them of the cancellation. This will stop any future billing. 
+        ul
+          li[data-search-target="result"]
+            |  Once the billing cycle runs out the group will go into a disabled mode. This will make the group inaccessible. 
+          li
+            |  If you would like to reactivate the group a manager or owner of the group would need to contact 
+            a[href="mailto:support@groupsite.com"]
+              | support@groupsite.com
+            |  to inform them of the reactivation. This will also require payment information be re-established. 
+          li
+            |  Group managers are responsible for the deletion of data, including the removal of members before the group is cancelled. 
+    
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Designing the Dashboard page 
+    ul
+      li[data-search-target="result"]
+        |  The dashboard page is designed by adding modules. The modules for the dashboard are from the various features of the group. You can add modules to connect to the file cabinet, discussions, calendar, recent activity, media gallery, blogs, subgroups, and members highlight features. There are a few other modules that do not connect to features that can also be used. Such as the Free Text(HTML) module, or the Video Embed Module. 
+        em[style="color:red;"]
+          | Note:
+        |  Files must be uploaded to the relevant feature before they can be used in a module. 
+        ul
+          li[data-search-target="result"]
+            |  To add modules once logged in, on the dashboard page 
+            b
+              | scroll
+            |  over the desired area for the module and click 
+            b
+              | "Add Module"
+            | . This will give a list of modules to choose. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Dashboard Modules 
+    br
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  List of the modules used for the dashboard page and their functionality. 
+    ul
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | Group Blog: Featured Post
+        |  - This will display a card link to the post/blog of your choosing from the "Blogs" feature. There must be blogs created. To do so do the following on the dashboard. 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+            | . 
+          li
+            |  click the 
+            b
+              | "Group Blog: Featured Post"
+          li
+            |  click 
+            b
+              | "Select a featured blog"
+            |  dropdown and 
+            b
+              | select the blog
+            |  desired. 
+          li
+            |  click 
+            b
+              | "Save Module"
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | Group Blog: Recent Post
+        |  - This will give the ability as in the above "Featured Post" module. Additionally you can add "recent posts" that have been uploaded to Blogs. To do so do the following on the dashboard. 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "Group Blog: Recent Post"
+          li
+            |  in the "View" field dropdown 
+            b
+              | select "Recent Posts"
+          li
+            |  in the 
+            b
+              | "# of Items"
+            |  field dropdown select how many 
+            b
+              | recent posts
+            |  you would like to have displayed. 
+          li
+            |  click 
+            b
+              | "Save Module"
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | Discussions Feature Topic
+        |  - The discussions "Feature Topic" gives the ability to display a specific topic from the Discussions feature. To do so do the following on the dashboard. 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "Discussions: Featured Topics"
+          li
+            |  Add a 
+            b
+              | title
+            |  in the "Title" field 
+          li
+            b
+              | select a topic
+            |  from the dropdown field in "Select a Topic" 
+          li
+            |  click 
+            b
+              | "Save Module"
+            | . 
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | Discussions Popular Topics
+        |  - This module gives the ability to display a chosen number of popular, recent, or new topics from a specific discussion. To do so do the following on the dashboard. 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "Discussions: Popular Topics"
+          li
+            b
+              | Add a title
+            |  in the "Title" field 
+          li
+            b
+              | choose a discussion
+            |  from the dropdown in the "Forum" field 
+          li
+            b
+              | choose what to display
+            |  from the dropdown in the "View" field 
+          li
+            b
+              | select number of items to display
+            |  in the dropdown in the "# of Items" field 
+          li
+            |  click 
+            b
+              | "Save Module"
+            | . 
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | Members: Member Highlight
+        |  - This module gives the ability to show a member's profile on the dashboard for all to see. To do so do the following on the dashboard. 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "Members: Member Highlight"
+          li
+            |  Add a 
+            b
+              | title
+            |  in the "Title" field 
+          li
+            b
+              | select a member
+            |  from the dropdown in the "Member" field 
+          li
+            |  click 
+            b
+              | "Save Module"
+            | . 
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | Members: Featured Members
+        |  - This module gives the ability show a specific number of members based on the categories of the last online, currently online, most active contributors, most active visitors. To do so do the following on the dashboard. 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "Members: Featured Members"
+          li
+            b
+              | Add a title
+            |  in the "Title" field 
+          li
+            b
+              | select a category
+            |  of members to be displayed in the "View" dropdown 
+          li
+            b
+              | select the number of items
+            |  to show from the "# of Items" field 
+          li
+            |  click 
+            b
+              | "Save Module"
+            | . 
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | Subgroups: Featured Subgroup
+        |  - This module shows a card that links to the subgroup that is displayed. To do so do the following on the dashboard. 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "Subgroups: Featured Subgroup"
+          li
+            b
+              | Add a title
+            |  in the "Title" field 
+          li
+            b
+              | select a subgroup
+            |  in the dropdown from the "Select a Subgroup" field 
+          li
+            |  click 
+            b
+              | "Save Module"
+            | . 
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | Subgroups: Featured Subgroups
+        |  - This module allows a chosen number of subgroups to be listed from categories of most members, newest, recently active. To do so do the following on the dashboard. 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "Subgroups: Featured Subgroups"
+          li
+            b
+              | Add a title
+            |  in the "Title" field 
+          li
+            b
+              | select the category
+            |  from the "View" field dropdown 
+          li
+            b
+              | select how many subgroups
+            |  to display from the dropdown field "# of Items" 
+          li
+            |  click 
+            b
+              | "Save Module"
+            | . 
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | Calendar: Recent Events
+        |  - This module displays a chosen number of upcoming calendar events from the calendar feature. To do so do the following on the dashboard 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "Calendar: Recent Events"
+          li
+            b
+              | Add a title
+            |  in the "Title" field 
+          li
+            b
+              | select how many events
+            |  to show in the "# of Items" field 
+          li
+            |  click 
+            b
+              | "Save Module"
+            | . 
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | This Group Consist of
+        |  - This module is used to display 3 card links to specific features from the group. To do so do the following on the dashboard. 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "This Group Consists Of"
+          li
+            b
+              | Add a title
+            |  in the "Title" field" 
+          li
+            b
+              | Select a feature
+            |  for columns 1, 2, and 3 dropdowns 
+          li
+            |  click 
+            b
+              | "Save Module"
+            | . 
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | Video Embed
+        |  - This module allows for an embedded video to be displayed. To do so do the following on the dashboard. 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "Video Embed"
+          li
+            b
+              | Add a title
+            |  to the "Title" field 
+          li
+            |  enter in the 
+            b
+              | embedded code
+            |  in the "Video Embed Code" area 
+          li
+            |  click 
+            b
+              | "Save Module".
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | Free Text
+        |  - This module allows for text, files, and links to be uploaded and some basic styling of the text. To do so do the following on the dashboard 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "Free Text"
+          li
+            b
+              | Add a title
+            |  in the "Title" field 
+          li
+            |  enter in desired text 
+          li
+            b
+              | highlight text
+            |  and 
+            b
+              | select a icon in the header
+            |  for styling 
+          li
+            |  use the 
+            b
+              | file browser icon
+            |  to add a 
+            b
+              | link
+            | , and the 
+            b
+              | paper clip icon
+            |  the display a 
+            b
+              | image or video
+          li
+            |  click 
+            b
+              | "Save Module"
+            | . 
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | Free Text (HTML)
+        |  - This module allows for text, and some html tags to be used to display information. This allows for more control over the size of information being displayed. To do so do the following on the dashboard. 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "Free Text (HTML)"
+          li
+            b
+              | add a title
+            |  in the "Title" field 
+          li
+            b
+              | enter in the text and html
+            |  desired 
+          li
+            |  click 
+            b
+              | "Save Module".
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | Media Gallery
+        |  - This module displays a collage which links to a folder of images in the media gallery. To do so do the following on the dashboard. 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "Media Gallery"
+          li
+            b
+              | Add a title
+            |  in the "Title" field 
+          li
+            b
+              | select a photo
+            |  gallery from the "Gallery" dropdown 
+          li
+            |  click 
+            b
+              | "Save Module"
+            | . 
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | Shared Links
+        |  - This module displays card links to URLs. To do so do the following on the dashboard. 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "Shared Links"
+          li
+            |  click 
+            b
+              | "Save Module"
+          li
+            b
+              | add a title
+            |  in the "Title" field 
+          li
+            |  In the "Link" field 
+            b
+              | add a URL
+          li
+            |  click 
+            b
+              | "Add Link"
+          li
+            b
+              | repeat process
+            |  to add as many links as needed 
+          li
+            |  click 
+            b
+              | "Save Module"
+            | . 
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | File Cabinets Files
+        |  - This module allows for links to files in the file cabinet. To do so do the following on the dashboard. 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "File Cabinet Files"
+          li
+            b
+              | add a title
+            |  in the "Title" field 
+          li
+            b
+              | select a category
+            |  in the "View" field dropdown 
+          li
+            |  To select specific files choose 
+            b
+              | "Select Files"
+            |  in "View" dropdown 
+          li
+            |  click 
+            b
+              | "Choose File"
+          li
+            b
+              | select files
+            |  desired. For 
+            b
+              | recently uploaded files
+            |  select 
+            b
+              | "Recent Files"
+            |  in the "View" dropdown 
+          li
+            b
+              | select how many
+            |  to be display from the "# of Items" field 
+          li
+            |  click 
+            b
+              | "Save Module"
+            | . 
+      li[data-search-target="result"]
+        b[style="color: #1A59CC"]
+          | Recent Activity
+        |  - The module displays a chosen number of card link/s from all, or a single category from the recent activity feature. This module includes a pagination that will show the specified number of items at a time while paginating through the recent activity feed. To do so do the following on the dashboard. 
+        ol
+          li
+            |  Click 
+            b
+              | "Add Module"
+          li
+            |  click 
+            b
+              | "Recent Activity"
+          li
+            b
+              | add a title
+            |  in the "Title" field 
+          li
+            b
+              | select what category
+            |  to display from the "View" dropdown 
+          li
+            b
+              | select how many
+            |  feeds to be displayed at once by selecting from the "# of Items" dropdown field 
+          li
+            |  click 
+            b
+              | "Save Module".
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  My Account section 
+    br
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  This feature gives access to a member's account information for viewing or editing. 
+    ul
+      li[data-search-target="result"]
+        |  Here you add and remove email addresses associated with the account. 
+        ul
+          li[data-search-target="result"]
+            ol
+              li[data-search-target="result"]
+                |  To add an email do the following. 
+                ol
+                  li
+                    |  Scroll over the user 
+                    b
+                      | account icon in the top right corner
+                  li
+                    |  click 
+                    b
+                      | "My Account"
+                  li
+                    |  under 
+                    i
+                      | Logins/Emails
+                    |  click 
+                    b
+                      | "+ Add Email Address"
+                  li
+                    |  enter the 
+                    b
+                      | new email address
+                    |  in the pop up 
+                  li
+                    |  click 
+                    b
+                      | "Save"
+                  li
+                    |  Go to your new email address 
+                  li
+                    |  open email from mailer@groupsite.com 
+                  li
+                    |  click 
+                    b
+                      | "Verify My Email"
+                    | . 
+              li[data-search-target="result"]
+                |  Once the email has been verified. The email address can be made the primary for the account. To do so do the following once the email address has been verified. 
+                ol
+                  li
+                    |  Scroll over the 
+                    b
+                      | user icon in the top right corner
+                  li
+                    |  click 
+                    b
+                      | "My Memberships"
+                  li
+                    |  select the 
+                    b
+                      | new email address from the dropdown "Email"
+                    |  field under "Privacy and Contact Information" for that group. Multiple groupsites will be displayed if there is more than one groupsite membership. The primary email addresses can be different with each group. 
+          li[data-search-target="result"]
+            em[style="color:red"]
+              | Note:
+            |  Before attempting to remove the primary email address, another email address would need to be made the primary email address. To remove an email address do the following. 
+            ol
+              li
+                |  Scroll over the 
+                b
+                  | "User Icon"
+                |  in the top right corner 
+              li
+                |  Click 
+                b
+                  | "My Account"
+              li
+                |  to the right of the email address click 
+                b
+                  | "Remove"
+              li
+                |  click 
+                b
+                  | "Ok"
+                |  on the popup. 
+      li[data-search-target="result"]
+        |  You can change your password by - 
+        ul
+          li[data-search-target="result"]
+            ol
+              li
+                |  Scroll over the 
+                b
+                  | "User Icon"
+                |  in the top right corner 
+              li
+                |  Click 
+                b
+                  | "My Account"
+              li
+                |  clicking 
+                b
+                  | "Change Password"
+              li
+                |  enter 
+                b
+                  | current password
+                | , 
+                b
+                  | new password
+                | , 
+                b
+                  | confirm password
+                |  in the appropriate fields 
+              li
+                |  click 
+                b
+                  | "Save Changes"
+                | . 
+      li[data-search-target="result"]
+        |  Update user personal information for the account. 
+        ul
+          li[data-search-target="result"]
+            |  To do so do the following. Click 
+            b
+              | "My Account"
+            |  &gt; various fields on the page allow for personal information to be updated. 
+      li[data-search-target="result"]
+        |  Upload profile files 
+        ul
+          li[data-search-target="result"]
+            |  To do so do the following. Click 
+            b
+              | "My Account"
+            |  &gt; scroll down to 
+            b
+              | "Profile Uploads Here"
+            |  &gt; 
+            b
+              | click or drag
+            |  and drop files desired &gt; click 
+            b
+              | "Save Changes"
+            | . 
+      li[data-search-target="result"]
+        |  select who can view those files 
+        ul
+          li[data-search-target="result"]
+            |  To do so do the following. Click 
+            b
+              | "My Account"
+            |  &gt; scroll down to 
+            b
+              | "Profile Uploads Visibility"
+            |  &gt; 
+            b
+              | select
+            |  the desired setting &gt; click 
+            b
+              | "Save Changes"
+            | . 
+      li[data-search-target="result"]
+        |  create or edit a short Biography 
+        ul
+          li[data-search-target="result"]
+            |  To do so do the following. Click 
+            b
+              | "My Account"
+            |  &gt; scroll down to 
+            b
+              | "Short Bio"
+            |  &gt; 
+            b
+              | enter text desired
+            q[style="color:red"]
+              | Note: highlight text to use with styling headers
+            |  &gt; click 
+            b
+              | "Save Changes"
+            | . 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  My Memberships section 
+    br
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  This section shows what groups the account is associated with. 
+    ul
+      li[data-search-target="result"]
+        |  Pending invitations, and requests for groups and subgroups are displayed here. 
+      li[data-search-target="result"]
+        |  Shows personal information being displayed for each group. 
+      li[data-search-target="result"]
+        |  Allows the option to select a different associated email address for each group. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  My Subscription Section 
+    br
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  This sections controls what emails are received by you from the platform. 
+    ul
+      li[data-search-target="result"]
+        |  Adjust the frequency of emails for the recent activity feature. 
+      li[data-search-target="result"]
+        |  Select if you want emails from private messages 
+      li[data-search-target="result"]
+        |  Select if user wants emails from RSVPs 
+      li[data-search-target="result"]
+        |  Select if user wants emails from discussion topics 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Searching 
+    ul
+      li[data-search-target="result"]
+        |  At the top of your groupsite is a search field with a dropdown. The dropdown allows you to choose what section of the groupsite to search. The search field text will search the group for the string of text entered. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  File Size Limit 
+    ul
+      li[data-search-target="result"]
+        |  175MB per file. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  File Permissions 
+    ul
+      li[data-search-target="result"]
+        |  User account profile uploads can be restricted to the user, managers, or managers and members. 
+      li[data-search-target="result"]
+        |  File cabinet files can be restricted by managers through changing the permission the folder containing the file/s. Folders' permissions can be changed to managers only, or members and managers. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Updating Memberships 
+    ul
+      li[data-search-target="result"]
+        |  To update group memberships do the following once logged in as a manager. 
+        ol
+          li
+            |  click 
+            b
+              | "Manage Members"
+          li
+            b
+              | Find the member
+            |  desired 
+          li
+            |  click 
+            b
+              | "Edit icon" in the Edit column
+            |  to the right of the member. Here you can do the following 
+            ul
+              li[data-search-target="result"]
+                |  Update a member's status. To 
+                b
+                  | suspend, or unsuspend
+                |  a member use the 
+                b
+                  | "Status"
+                |  dropdown. 
+              li[data-search-target="result"]
+                |  Suspend, Unsuspend, or Remove a member. To 
+                b
+                  | "Suspend"
+                | , 
+                b
+                  | "unsuspend"
+                |  or 
+                b
+                  | "Remove"
+                |  a membership click the relative buttons. Once a member is 
+                b
+                  | "Removed"
+                | , that member would need to go through the onboarding process again to become a member. 
+      li[data-search-target="result"]
+        |  Two ways to update subgroup memberships are as follows 
+        ol
+          li
+            |  From the Manage Members tab once logged in as a manager do the following. 
+            ol
+              li
+                |  click 
+                b
+                  | "Manage Members"
+              li
+                b
+                  | Find the member
+                |  desired 
+              li
+                |  click 
+                b
+                  | "Edit icon" in the Edit column
+                |  to the right of the member. On The next page you can do the following 
+                ul
+                  li[data-search-target="result"]
+                    |  Add the member to a subgroup. To do so do the following. 
+                    ol
+                      li
+                        |  scroll down to appropriate subgroup 
+                      li
+                        |  in the "Status" dropdown 
+                        b
+                          | select the appropriate status
+                  li[data-search-target="result"]
+                    |  Suspend, Unsuspend, or remove a subgroup membership. To 
+                    b
+                      | "Suspend"
+                    |  or 
+                    b
+                      | "Remove"
+                    |  a membership click the relative buttons. Once a member is removed, that member would need to go through the onboarding process again to become a member. 
+                  li[data-search-target="result"]
+                    |  View a member's profile 
+                  li[data-search-target="result"]
+                    |  See answers to "Group Questions" 
+                  li[data-search-target="result"]
+                    |  See the last time the member was online 
+                  li[data-search-target="result"]
+                    |  The member's email address 
+                  li[data-search-target="result"]
+                    |  The member's email address 
+                  li[data-search-target="result"]
+                    |  The member's joined date 
+          li
+            |  From the subgroup 
+            ol[data-search-target="result"]
+              li
+                |  click the "
+                b
+                  | Subgroups
+                | " tab. 
+              li
+                |  select the 
+                b
+                  | appropriate subgroup
+                | . 
+              li
+                |  click 
+                b
+                  | "Manage"
+                |  in the upper right side 
+              li
+                |  On the following page you can do the following 
+                ul
+                  li[data-search-target="result"]
+                    |  View the subgroup members through the "Members" header. From this page you can do the following. 
+                    ul
+                      li
+                        |  See a display of how many members are in the subgroup, and how many invitations are pending, and or declined. 
+                      li
+                        |  You can invite more members through the "Invite More Members" button. 
+                      li
+                        |  Search through subgroup members 
+                      li
+                        |  Subgroup managers can make members managers or delete subgroup memberships. Using the respective "Make Manager", and "Delete" buttons next to the member of choice. 
+                  li[data-search-target="result"]
+                    |  View pending, approved, and declined invitations the subgroup through the "Invitations" header. Pending invitations can be viewed or withdrawn. 
+                  li[data-search-target="result"]
+                    |  View membership requests to the subgroup through the "Membership Requests" header. Here you can search, approve, decline, or preview requests. 
+                  li[data-search-target="result"]
+                    |  Edit the subgroup settings through the "Edit Subgroup" header. 
+                  li[data-search-target="result"]
+                    |  View the subgroup profile questions and answers through The "Profile Questions" header. Here you can add or update subgroup profile questions. Subgroup profile questions are separate from group profile questions. They will be asked of the member when onboarding to the subgroup. If subgroup questions are marked required, subgroup members will have to answer the questions before onboarding is completed. Subgroup managers can choose the type of questions to be answered. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Single Sign On (SSO) 
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  The ability to have group members sign into Groupsite when logging into their organization's internal network. Groupsite supports SSO with active directory, Okta, Google login and more. 
+    ul
+      li[data-search-target="result"]
+        |  SSO - Single Sign On for organizations is possible. This gives groups the ability to have users sign into Groupsite from another location. So that there is one central place users log in. The user data base is maintained by the group, not Groupsite. Through a secure connection the user data is forwarded to Groupsite's platform. The user data would include personal information(i.e. name, email), groupsite memberships, and subgroup memberships. Please go to the following link for detailed information and setup instructions. 
+        a[href="https://groupsite.com/sso_setup"]
+          | groupsite.com/sso_setup
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Inviting Members 
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  Inviting members to your groupsite can be done in a few ways through adjusting the "Membership" field under Membership Settings. All email addresses must be verified no matter the setting. 
+    ul
+      li[data-search-target="result"]
+        b[style="color:#1A59CC"]
+        | "Invitation and Approved Request" - This allows users to request a membership to the group. Or for managers to send invitations to users for group membership. To do so through an approved request, users would click a 
+        b
+          | "Join Now"
+        |  button on the groupsite page. This would generate an 
+        b
+          | email to the managers
+        |  of the group. A manager would need to 
+        b
+          | accept or decline
+        |  the request. For Invitation see "Invitation Only". 
+      li[data-search-target="result"]
+        |  "Invitation Only" - This only allows membership through a managers' invitations. To do so managers can do the following 
+        ol
+          li
+            |  click the 
+            b
+              | person+ icon
+            |  in the top right corner or click 
+            b
+              | "Manage Members"
+          li
+            |  click 
+            b
+              | "Invite New"
+          li
+            |  Here you can 
+            b
+              | enter email address(es)
+            |  separated with a comma 
+          li
+            b
+              | Create and use a message template
+            |  if desired through the "Message Template" section 
+          li
+            b
+              | add title
+            |  in the "Subject" field &gt; 
+            b
+              | Enter in text
+            |  desired in the "Content" field 
+          li
+            b
+              | select any subgroups
+            |  you would like the user/s to be a part of 
+          li
+            |  click 
+            b
+              | "Send Invitations"
+            | . 
+      li[data-search-target="result"]
+        |  "Anyone Can Join" - This allows users to click a join button when on the groupsite that allows them to click a "Join Now" button. To do so, when the join button is clicked on the group's page the user will go through the steps of verifying their email address, and any profile questions setup by group managers. After the user would be a member. 
+    .groupsite_blue.groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  What is a Subgroup 
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  a subgroup is a group within a groupsite. In example, organizations may have various departments. A subgroup could be an accounting department area for secure communications from the rest of group. Or the subgroup could be the companies events planning area. Which could include all members of the group. - Features of subgroups are as follows 
+    ul
+      li[data-search-target="result"]
+        |  as with groups, subgroups have the following features: dashboard, discussions, calendar, file cabinet, media gallery 
+      li[data-search-target="result"]
+        |  Subgroup settings - an area to manage subgroup permissions for onboarding, name, visibility, suffix for URL, description, subgroup logo and initials. 
+      ul
+        li
+          |  subgroup managers can 
+          b.groupsite_blue
+            | change the name
+          |  of the subgroup. To do so do the following once in the subgroup. 
+          ol
+            li
+              |  Click 
+              b
+                | "Manage"
+              |  in the upper right side 
+            li
+              |  click 
+              b
+                | "Edit Subgroup"
+            li
+              |  In the "Name" field 
+              b
+                | enter the new name
+              |  desired. 
+            li
+              |  click 
+              b
+                | "Update Subgroup"
+              | . 
+        li[data-search-target="result"]
+          |  subgroup managers can 
+          b.groupsite_blue
+            | change the subgroup logo and initials
+          | . To do so do the following once in the subgroup. 
+          ol
+            li
+              |  Click 
+              b
+                | "Manage"
+              |  in the upper right side 
+            li
+              |  click 
+              b
+                | "Edit Subgroup"
+            li
+              |  Under "Subgroup Logo Options" dropdown select 
+              b
+                | "Use Square Image"
+              | . Then click 
+              b
+                | "Choose File"
+              |  to upload the image desired click the button 
+              b
+                | "Upload Square Logo"
+              |  and select an image. 
+            li
+              |  Or Under "Subgroup Logo Options" dropdown select 
+              b
+                | "Use Initials"
+              |  In the "Initials" field 
+              b
+                | enter the initials
+              |  desired. 
+            li
+              |  click 
+              b
+                | "Update Subgroup"
+              | . 
+        li[data-search-target="result"]
+          |  subgroup managers can 
+          b.groupsite_blue
+            | change the description
+          |  of the subgroup. To do so do the following once in the subgroup. 
+          ol
+            li
+              |  Click 
+              b
+                | "Manage"
+              |  in the upper right side 
+            li
+              |  click 
+              b
+                | "Edit Subgroup"
+            li
+              |  In the "Subgroup Directory Description" field 
+              b
+                | enter the new description
+              |  desired. 
+            li
+              |  click 
+              b
+                | "Update Subgroup"
+              | . 
+        li[data-search-target="result"]
+          |  subgroup managers can 
+          b.groupsite_blue
+            | change the subgroup URL suffix
+          | . To do so do the following once in the subgroup. 
+          ol
+            li
+              |  Click 
+              b
+                | "Manage"
+              |  in the upper right side 
+            li
+              |  click 
+              b
+                | "Edit Subgroup"
+            li
+              |  In the "Web Address" field 
+              b
+                | enter the new suffix
+              |  desired. The full URL would be in the format of 
+              b
+                | groupsite.com.[groupname]/subgroups/[subgroupsuffix]
+              | . 
+            li
+              |  click 
+              b
+                | "Update Subgroup"
+              | . 
+        li[data-search-target="result"]
+          |  subgroup managers can adjust the 
+          b.groupsite_blue
+            | "Onboarding"
+          |  settings for the subgroup membership. To do so do the following once in the subgroup. 
+          ol
+            li
+              |  Click 
+              b
+                | "Manage"
+              |  in the upper right side 
+            li
+              |  click 
+              b
+                | "Edit Subgroup"
+            li
+              |  Under the "Membership" dropdown 
+              b
+                | select the appropriate option
+            li
+              |  click "Update Subgroup". 
+        li[data-search-target="result"]
+          |  subgroup managers can adjust the 
+          b.groupsite_blue
+            | "Profile Questions"
+          |  for the subgroup membership. To do so do the following once in the subgroup. 
+          ol
+            li
+              |  Click 
+              b
+                | "Manage"
+              |  in the upper right side 
+            li
+              |  click 
+              b
+                | "Profile Questions"
+            li
+              |  click 
+              b
+                | "+ Add Question"
+              |  to add a question. 
+            li
+              |  In the "Question" field 
+              b
+                | enter the question's
+              |  title &gt;&gt; In the 
+              b
+                | "Type" dropdown
+              |  select the type of question desired. If you want the question to be 
+              b
+                | required
+              |  check the "Required" checkbox. 
+            li
+              b
+                | repeat step
+              |  four to add as many questions as needed. 
+            li
+              |  click 
+              b
+                | "Save Changes"
+              | . 
+        li[data-search-target="result"]
+          |  subgroup managers can adjust the 
+          b.groupsite_blue
+            | "Membership Settings"
+          |  for the subgroup membership. To do so do the following once in the subgroup. 
+          ol
+            li
+              |  Click 
+              b
+                | "Manage"
+              |  in the upper right side 
+            li
+              |  click 
+              b
+                | "Edit Subgroup"
+            li
+              |  Under the "Basic Settings" in "Membership" dropdown 
+              b
+                | select the appropriate option
+            li
+              |  click "Update Subgroup". 
+        li[data-search-target="result"]
+          |  The ability to choose to 
+          b.groupsite_blue
+            | display subgroups to non subgroup members
+          | , on the subgroup page. To do so do the following once in the subgroup. 
+          ol
+            li
+              |  Click 
+              b
+                | "Manage"
+              |  in the upper right side 
+            li
+              |  click 
+              b
+                | "Edit Subgroup"
+            li
+              |  Under Subgroup Visibility the "Visibility" section "Directory" field 
+              b
+                | select Disabled
+              | . 
+        li[data-search-target="result"]
+          |  several sections for subgroup managers control - Members, Invitations, Membership Requests, Profile Questions, and other subgroup settings. To do so do the following once in the subgroup. 
+        ul
+          li[data-search-target="result"]
+            |  Click 
+            b
+              | "Manage"
+            | . Here headers to manage the various subgroup features mentioned above. 
+      li
+        |  subgroup 
+        b.groupsite_blue
+          | onboarding/becoming a subgroup member/creating subgroup members
+        |  - all subgroup members would need to be a part of the group 
+        ul
+          li[data-search-target="result"]
+            |  group managers can make group members a part of a subgroup without an invitation or approved request by doing the following. 
+          ol
+            li
+              |  Click 
+              b
+                | "Manage Members"
+            li
+              b
+                | find the member
+              |  desired 
+            li
+              |  click the 
+              b
+                | edit icon
+              |  to the right of the member 
+            li
+              b
+                | scroll down
+              |  to the subgroup section and in the 
+              b
+                | "Status" dropdown
+              |  select the appropriate option. 
+          li[data-search-target="result"]
+            |  group members can 
+            b.groupsite_blue
+              | become part of a subgroup
+            |  by clicking the subgroup tab on the group's page and then doing the following 
+          ol
+            li
+              |  Click 
+              b
+                | "Request Membership"
+              |  on the subgroup desired. Depending on subgroup settings, subgroups may not show, or be invitation only. Invitation to a subgroup can also be sent to a member's email address. 
+            li
+              |  Through 
+              b
+                | "Invitation"
+              |  onboarding users would need to go to that email and click the 
+              b
+                | "Join Subgroup's name"
+              |  button. 
+      li[data-search-target="result"]
+        |  subgroup managers can 
+        b.groupsite_blue
+          | delete a subgroup
+        | . To do so do the following once in the subgroup. 
+        ol
+          li
+            |  Click 
+            b
+              | "Manage"
+            |  in the upper right side 
+          li
+            |  click 
+            b
+              | "Edit Subgroup"
+          li
+            |  Scroll to the bottom of the page and click the 
+            b
+              | "Delete Subgroup"
+            |  button. 
+          li
+            |  In the popup dialog click the 
+            b
+              | "Delete Subgroup"
+            |  button to confirm the deletion. 
+      li[data-search-target="result"]
+        |  subgroup managers can 
+        b.groupsite_blue
+          | make a member a subgroup manager
+        | . To do so do the following once in the subgroup. 
+        ol
+          li
+            |  Click 
+            b
+              | "Manage"
+            |  in the upper right side 
+          li
+            |  click the 
+            b
+              | "Members"
+            |  header 
+          li
+            |  Find the member you want to make a manager 
+          li
+            |  Click the 
+            b
+              | "Make Manager" or "Make Member"
+            |  button to the right of the member. 
+      li[data-search-target="result"]
+        |  subgroup managers can 
+        b.groupsite_blue
+          | remove a subgroup member
+        | . To do so do the following once in the subgroup. 
+        ol
+          li
+            |  Click 
+            b
+              | "Manage"
+            |  in the upper right side 
+          li
+            |  click the 
+            b
+              | "Members"
+            |  header 
+          li
+            |  Find the member you want to remove 
+          li
+            |  Click the 
+            b
+              | "Delete"
+            |  button to the right of the member. 
+          li
+            |  In the popup dialog click the 
+            b
+              | "OK"
+            |  button to confirm the deletion. 
+      li[data-search-target="result"]
+        |  subgroup managers can 
+        b.groupsite_blue
+          | invite members to a subgroup
+        | . To do so do the following once in the subgroup. 
+        ol
+          li
+            |  Click 
+            b
+              | "Manage"
+            |  in the upper right side 
+          li
+            |  click the 
+            b
+              | "Members"
+            |  header 
+          li
+            |  click 
+            b
+              | "Invite More Members"
+            |  button 
+          li
+            |  Here you can 
+            b
+              | select group member(s)
+            |  desired with the checkbox to the right of the member. 
+          li
+            |  click the 
+            b
+              | "Send Invitations"
+            |  button. 
+    .groupsite_blue.groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Sandbox/Testing environment 
+    ul
+      li[data-search-target="result"]
+        |  Testing Groupsite's platform can be done through our 30 day free trial period. During this period access to many features is given for testing and setting up your groupsite before any payment would be required. To do so sign up for an account if you do not already have a Groupsite account. You can get started by clicking the following link. 
+        a[style="color:red;" href="groupsite.com/sign_up/email/new?start_free_trial=true"]
+          | Sign up and Start a Free Trial
+        | . The free trial last 30 days. After the 30 days is up, to continue with the Groupsite enter payment information in "Account/Upgrade" section. If no payment information is entered the group will be disabled. Though the group could be reinstated. 
+    .groupsite_blue.groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Discussions Feature 
+    .groupsite_blue.groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  Discussion feature allows for members to communicate through topics created by the group.
+    ul
+      li[data-search-target="result"]
+        |  Discussions can be added, deleted, renamed, and the visibility permissions set. 
+        ul
+          li[data-search-target="result"]
+            |  To add a discussion do the following. 
+            ol
+              li
+                |  Click 
+                b
+                  | "discussions"
+                |  in the main navigation. 
+              li
+                |  click 
+                b
+                  | "+ Create Discussion"
+                |  to add a discussion. 
+              li
+                |  Add a 
+                b
+                  | name
+                |  in the "NAME" field. 
+              li
+                |  Add a 
+                b
+                  | description
+                |  in the "DESCRIPTION" field. 
+              li
+                |  click 
+                b
+                  | "Create Discussion"
+                | . 
+          li[data-search-target="result"]
+            |  To delete a discussion do the following. 
+            ol
+              li
+                b
+                  i[style="color:red;"]
+                    | Note:
+                |  All topics must be deleted before a discussion can be deleted. To delete a topic do the following. 
+                ol
+                  li
+                    |  Click 
+                    b
+                      | "Discussions"
+                    |  in the main navigation. 
+                  li
+                    |  Select the 
+                    b
+                      | desired discussion
+                    | . 
+                  li
+                    |  Select the box to the left of the 
+                    b
+                      | desired topic
+                    | . 
+                  li
+                    |  Click the 
+                    b
+                      | "Delete"
+                    |  button. 
+                  li
+                    |  In the popup dialog click the 
+                    b
+                      | "Delete Topics"
+                    |  button to confirm the deletion. 
+              li
+                i
+                  | discussion deletion continue...
+                |  Click 
+                b
+                  | "Discussions"
+                |  in the main navigation. 
+              li
+                |  Find the discussion you want to delete. 
+              li
+                |  Scroll over the desired discussion and click the 
+                b
+                  | "Edit"
+                |  button to the right. 
+              li
+                |  Click the 
+                b
+                  | "Delete"
+                |  button. 
+              li
+                |  In the popup dialog click the 
+                b
+                  | "Delete Topics"
+                |  button to confirm the deletion. 
+          li[data-search-target="result"]
+            |  To rename a discussion do the following. 
+            ol
+              li
+                |  Click 
+                b
+                  | "Discussions"
+                |  in the main navigation. 
+              li
+                |  Find the discussion you want to rename. 
+              li
+                |  Click 
+                b
+                  | "Edit"
+                |  to the right of the discussion. 
+              li
+                |  Update the 
+                b
+                  | name
+                |  in the "NAME" field. 
+              li
+                |  click 
+                b
+                  | "Save Discussion"
+                | . 
+          li
+            |  To set visibility permissions for a discussion do the following. 
+            ol
+              li
+                |  Click 
+                b
+                  | "Discussions"
+                |  in the main navigation. 
+              li
+                |  Find the discussion you want to set permissions for. 
+              li
+                |  Click 
+                b
+                  | "Edit"
+                |  to the right of the discussion. 
+              li
+                |  In the "Visibility" section, choose the desired permission setting from the dropdown menu (e.g., Members &amp; Managers, or Managers Only). 
+              li
+                |  click 
+                b
+                  | "Save Discussion"
+                | . 
+      li[data-search-target="result"]
+        |  Within a discussion, topics can be created, deleted, renamed and moved to another discussion. 
+        ol
+          li[data-search-target="result"]
+            |  To create a topic do the following. 
+            ul
+              li
+                |  Click 
+                b
+                  | "Discussions"
+                |  in the main navigation. 
+              li
+                |  select the 
+                b
+                  | appropriate discussion
+                | . 
+              li
+                |  click 
+                b
+                  | "+ Create Topic"
+                | . 
+              li
+                |  Add a 
+                b
+                  | title
+                |  in the "TITLE" field. 
+              li
+                |  In the "Topic Content" field enter the 
+                b
+                  | text desired
+                | . 
+              li
+                |  click 
+                b
+                  | "Post Topic"
+                | . 
+          li[data-search-target="result"]
+            |  To delete a topic do the following. 
+            ul
+              li
+                |  Click 
+                b
+                  | "Discussions"
+                |  in the main navigation. 
+              li
+                |  select the 
+                b
+                  | appropriate discussion
+                | . 
+              li
+                |  select the box to the left of the 
+                b
+                  | appropriate topic
+                | . 
+              li
+                |  click the 
+                b
+                  | "Delete"
+                |  button. 
+              li
+                |  In the popup dialog click the 
+                b
+                  | "Delete Topics"
+                |  button to confirm the deletion. 
+          li[data-search-target="result"]
+            |  To rename a topic do the following. 
+            ul
+              li
+                |  Click 
+                b
+                  | "Discussions"
+                |  in the main navigation. 
+              li
+                |  select the 
+                b
+                  | appropriate discussion
+                | . 
+              li
+                |  select the 
+                b
+                  | appropriate topic
+                | . 
+              li
+                |  click the 
+                b
+                  | "Edit"
+                |  button to the right of the topic. 
+              li
+                |  Update the 
+                b
+                  | "Topic Title" 
+                |  in the "TITLE" field. 
+              li
+                |  click 
+                b
+                  | "Save"
+                | . 
+          li[data-search-target="result"]
+            |  To move a topic to another discussion do the following. 
+            ol
+              li
+                |  Click 
+                b
+                  | "Discussions"
+                |  in the main navigation. 
+              li
+                |  select the 
+                b
+                  | appropriate discussion
+                | . 
+              li
+                |  select the 
+                b
+                  | appropriate topic
+                | . 
+              li
+                |  click the 
+                b
+                  | "Edit"
+                |  button to the right of the topic. 
+              li
+                |  In the 
+                b
+                  | "Forum"
+                |  dropdown select the 
+                b
+                  | desired discussion
+                | . 
+              li
+                |  click 
+                b
+                  | "Save"
+                | . 
+      li[data-search-target="result"]
+        |  Members can reply to topics. To do so do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Discussions"
+            |  in the main navigation 
+          li
+            |  select the 
+            b
+              | appropriate discussion
+            | . 
+          li
+            |  select the 
+            b
+              | appropriate topic
+            | . 
+          li
+            |  In the "Reply" field enter the 
+            b
+              | text desired
+            | . 
+          li
+            |  click 
+            b
+              | "Submit"
+            | . 
+      li[data-search-target="result"]
+        |  Members can "Follow" or "Unfollow" a topic to receive emails for that topic when replies are made. To do so do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Discussions"
+            |  in the main navigation 
+          li
+            |  select the 
+            b
+              | appropriate discussion
+            | . 
+          li
+            |  select the 
+            b
+              | appropriate topic
+            | . 
+          li
+            |  click 
+            b
+              | "Follow"
+            |  or 
+            b
+              | "Unfollow"
+            |  under the topic title. 
+      em
+        i[style="color:red;"]
+          | NOTE:
+        |  When following a topic, members will receive emails containing the replies submitted in that topic. Replying directly from a member's email is possible from "topic" generated emails. The reply will be added to the topic as a new reply, and also be added to the email thread for that topic. 
+      br
+      li[data-search-target="result"]
+        |  Discussions can be archived. When archived discussion will not show in the list of discussions. To do so do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Discussions"
+            |  in the main navigation. 
+          li
+            |  Select the discussion you want to archive. 
+          li
+            |  Click the 
+            b
+              | "Archive"
+            |  button. 
+          li
+            |  In the popup dialog click the 
+            b
+              | "Yes! Archive"
+            |  button to confirm. 
+      li[data-search-target="result"]
+        |  To view archived discussions do the following. Only managers can view archived discussions. 
+        ol
+          li
+            |  Click 
+            b
+              | "Discussions"
+            |  in the main navigation. 
+          li
+            |  Click the 
+            b
+              | "Archived Discussions -&gt;"
+            |  button. 
+          li
+            |  Using the 
+            b
+              | "Order By"
+            |  dropdown select the desired order to display the archived discussions. 
+          li
+            |  To unarchive a discussion click 
+            b
+              | "Unarchive"
+            |  for the desired discussion. 
+      li[data-search-target="result"]
+        |  Order or Pin discussions in the order desired. To do so do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Discussions"
+            |  in the main navigation. 
+          li
+            b
+              | Scroll over
+            |  the desired discussion 
+          li
+            |  click the 
+            b
+              | "6 horizontal dots"
+            |  to the left and hold down the mouse button to drag the discussion to the desired position. 
+          li
+            |  Release the mouse button to drop the discussion in the desired position. 
+      li[data-search-target="result"]
+        |  Use a discussion's email address to post new topics from an email. To do so do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Discussions"
+            |  in the main navigation. 
+          li
+            |  copy the email address in the top right corner from the field 
+            b
+              | "Post new topics to"
+            | . 
+          li
+            b
+              |  Use the copied email
+            |  address in the 
+            b
+              | "To" field
+            |  of an email to post a new topic to the discussion. The subject of the email will be the topic title, and the body of the email will be the topic content. Attachments can also be added to the email and will be added to the topic as attachments. 
+    - # ALL ABOVE IS PRODUCTION AS OF 9/1/2025. GRAMMATICAL ERRORS, and sequential numbering for directions HAVE BEEN CORRECTED AND NEED TO BE PUBLISHED TO PRODUCTION
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  File Cabinet 
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  The file cabinet is a secure area to upload, share, and manage files. Files can be organized in folders and subfolder. Files can be uploaded individually or in bulk. File types supported are .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx, .jpg, .png, .gif, .zip, and more. The maximum file size for upload is 175MB. 
+    ul
+      li[data-search-target="result"]
+        |  To upload files do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Files"
+            |  in the main navigation. 
+          li
+            |  select the 
+            b
+              | appropriate folder
+            |  or stay in the root directory. 
+          li
+            |  At the top, click or drag a file 
+            b
+              | "Drag or Click Here To Upload"
+            | . 
+            ul
+              li
+                em
+                  b[style="color:red;"]
+                    | Note
+                  | : Compressed folders for bulk upload can be uploaded, maintaining the same file structure as the compressed folder. Each file can be no larger than 175MB.
+          li
+            |  select the 
+            b
+              | your file
+            |  . 
+          li
+            |  click 
+            b
+              | "Upload File(s) into..."
+            | . 
+      li[data-search-target="result"]
+        |  To create a folder do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Files"
+            |  in the main navigation. 
+          li
+            |  select the 
+            b
+              | appropriate folder
+            |  or stay in the root directory. 
+          li
+            |  click 
+            b
+              | "Create Folder"
+            |  on the right hand side. 
+          li
+            |  In the popup dialog enter a 
+            b
+              | name
+            |  for the folder in the "Name This Folder" field. 
+          li
+            |  set the visibility from the 
+            b
+              | "Folder Visibility"
+            |  dropdown. 
+          li
+            |  click the 
+            b
+              | "Create Folder"
+            |  button. 
+      li[data-search-target="result"]
+        |  Moving files and folders to the "Trash". 
+        ol
+          li
+            |  Click 
+            b
+              | "Files"
+            |  in the main navigation. 
+          li
+            |  select the 
+            b
+              | appropriate folder
+            |  or stay in the root directory. 
+          li
+            |  select the box to the left of the desired file(s) or folder(s). 
+          li
+            |  click 
+            b
+              | "Move To Trash"
+            |  to the right of the page. 
+      li[data-search-target="result"]
+        |  To permanently delete files and folders from the "Trash". 
+        ol
+          li
+            |  Click 
+            b
+              | "Files"
+            |  in the main navigation. 
+          li
+            |  click the 
+            b
+              | "Trash"
+            |  button at the bottom of the page. 
+          li
+            |  select the box to the left of the desired file(s) or folder(s). 
+          li
+            |  click 
+            b
+              | "Delete Permanently"
+            |  to the right of the page. 
+          li
+            |  In the popup dialog click the 
+            b
+              | "Ok"
+            |  button to confirm. 
+      li[data-search-target="result"]
+        |  To move files or folders do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Files"
+            |  in the main 
+          li
+            |  select the 
+            b
+              | appropriate folder
+            |  or stay in the root directory. 
+          li
+            |  select the box to the left of the desired file(s) or folder(s). 
+          li
+            |  click 
+            b
+              | "Move Items"
+            |  to the right of the page. 
+          li
+            |  In the popup dialog select the 
+            b
+              | desired folder
+            |  to move the file(s) or folder(s) to. 
+          li
+            |  click the 
+            b
+              | "Move To"
+            |  button. 
+      li[data-search-target="result"]
+        |  To rename a file or folder do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Files"
+            |  in the main navigation. 
+          li
+            |  select the 
+            b
+              | appropriate folder
+            |  or stay in the root directory. 
+          li
+            |  To the right of the desired file or folder 
+            b
+              | scroll
+            |  over the 
+            b
+              | 3 horizontal dots
+            | . 
+          li
+            |  click 
+            b
+              | "Edit"
+            | . 
+          li
+            |  In the popup dialog update the 
+            b
+              | "File Name" or "Folder Name"
+            |  field. 
+          li
+            |  click the 
+            b
+              | "Save Changes"
+            |  button. 
+      li[data-search-target="result"]
+        |  To download a file do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Files"
+            |  in the main navigation. 
+          li
+            |  select the 
+            b
+              | appropriate folder
+            |  or stay in the root directory. 
+          li
+            |  To the right of the desired file 
+            b
+              | scroll
+            |  over the 
+            b
+              | 3 horizontal dots
+            | . 
+          li
+            |  click 
+            b
+              | "Download"
+            | . 
+      li[data-search-target="result"]
+        |  To share or copy a file or folder's link do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Files"
+            |  in the main navigation. 
+          li
+            |  select the 
+            b
+              | appropriate folder
+            |  or stay in the root directory. 
+          li
+            |  To the right of the desired file or folder 
+            b
+              | scroll
+            |  over the 
+            b
+              | 3 horizontal dots
+            | . 
+          li
+            |  click 
+            b
+              | "Share"
+            | . Here you will see option to share or copy the link. 
+      li[data-search-target="result"]
+        |  View Files that can be interpreted by the browser without downloading. To do so do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Files"
+            |  in the main navigation. 
+          li
+            |  select the 
+            b
+              | appropriate folder
+            |  or stay in the root directory. 
+          li
+            |  click the 
+            b
+              | file name
+            |  of the desired file. The file will open in a new tab if it can be interpreted by the browser. If not an option to download the file is given. 
+          li
+            |  Here the file can be liked by the member by clicking the 
+            b
+              | "like"
+            |  with the heart icon. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Media Tab/Media Gallery 
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  The media tab is an area to upload images to a collage, that could be linked to the dashboard by using the "Media Gallery" module. 
+    ul
+      li[data-search-target="result"]
+        |  To 
+        b.groupsite_blue
+          | create
+        |  a collage do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Media"
+            |  in the main navigation. 
+          li
+            |  click 
+            b
+              | "+ Create New"
+            |  to add a collage. 
+          li
+            |  Add a 
+            b
+              | name
+            |  in the "Gallery Name" field. 
+          li
+            |  click 
+            b
+              | "Create Gallery"
+            | . 
+          li
+            |  click 
+            b
+              | "Create Gallery"
+            | . 
+          li
+            |  add 
+            b
+              | "picture(s)"
+            |  to the 
+            b
+              | "Drag Or Click Here To Upload" section
+            | . 
+      li[data-search-target="result"]
+        |  To 
+        b.groupsite_blue
+          | delete
+        |  a collage do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Media"
+            |  in the main navigation. 
+          li
+            |  Click the collage you want to delete. 
+          li
+            |  Click the 
+            b
+              | "Edit"
+            |  button in the top right corner. 
+          li
+            |  Click the 
+            b
+              | "Delete Gallery"
+            |  button. 
+          li
+            |  In the popup dialog click the 
+            b
+              | "Ok"
+            |  button to confirm the deletion. 
+      li[data-search-target="result"]
+        |  To 
+        b.groupsite_blue
+          | rename
+        |  a collage do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Media"
+            |  in the main navigation. 
+          li
+            |  Click the collage you want to rename. 
+          li
+            |  Click the 
+            b
+              | "Edit"
+            |  button in the top right corner. 
+          li
+            |  Update the 
+            b
+              | "Gallery Name"
+            |  field. 
+          li
+            |  Click the 
+            b
+              | "Save Gallery"
+            |  button. 
+      li[data-search-target="result"]
+        |  To like pictures from a collage do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Media"
+            |  in the main navigation. 
+          li
+            |  Click the collage you want to view. 
+          li
+            |  Click the 
+            b
+              | "heart icon"
+            |  below the desired picture to like it. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Blogs 
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  The blog feature allows for members to create, edit, and delete blog posts. Drafts can be saved published later to the group. Blogs can be liked by members. 
+    ul
+      li[data-search-target="result"]
+        |  To 
+        b.groupsite_blue
+          | create a blog
+        |  post do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Blogs"
+            |  in the main navigation. 
+          li
+            |  click 
+            b
+              | "+ Create Blog"
+            |  to add a blog post. 
+          li
+            |  Add a 
+            b
+              | title
+            |  in the "Title" field. 
+          li
+            |  In the "Content" field enter the 
+            b
+              | text desired
+            | . 
+          li
+            |  optionally add a 
+            b
+              | picture
+            |  by one of two ways. 
+            ol
+              li
+                |  Using an Unsplash image. 
+                ol
+                  li
+                    |  click the 
+                    b
+                      | "camera image"
+                    |  to the top right of "Content" field. 
+                  li
+                    | Enter a 
+                    b
+                      | keyword
+                    |  in the search field. 
+                  li
+                    |  scroll through the results to find an image you want. 
+                    ul
+                      li
+                        em[style="color:red;"]
+                          | Note:
+                        |  Images can be marked as favorites for later use by clicking the 
+                        b
+                          | "Add To Favourite"
+                        |  button below the image. 
+              li
+                |  select the 
+                b
+                  | desired image
+                |  . 
+          li
+            |  Uploading image from your computer. 
+            ol
+              li
+                |  click the 
+                b
+                  | "Upload Cover Image"
+                |  button . 
+              li
+                |  select the 
+                b
+                  | desired image
+                |  from your computer. 
+      li
+        |  click 
+        b
+          | "Publish Now"
+        |  to publish immediately or click the 
+        b
+          | "Save as Draft"
+        |  button to save as a draft to publish later. 
+      li[data-search-target="result"]
+        |  To 
+        b.groupsite_blue
+          | edit a blog
+        |  post do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Blogs"
+            |  in the main navigation. 
+          li
+            |  click the 
+            b
+              | "Manage Blogs"
+            |  button. 
+          li
+            |  select the 
+            b
+              | appropriate blog post
+            | . 
+          li
+            |  click the 
+            b
+              | "Edit"
+            |  button in the top right corner. 
+          li
+            |  Update the 
+            b
+              | "Title" or "Blog Content" or "Image"
+            |  fields. 
+          li
+            |  click 
+            b
+              | "Save as Draft"
+            |  or 
+            b
+              | "Publish Now"
+            | . 
+      li[data-search-target="result"]
+        |  To 
+        b.groupsite_blue
+          | delete a blog
+        |  post do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Blogs"
+            |  in the main navigation. 
+          li
+            |  select the 
+            b
+              | appropriate blog post
+            | . 
+          li
+            |  click the 
+            b
+              | "Delete"
+            |  button at the top right of the blog post. 
+          li
+            |  In the popup dialog click the 
+            b
+              | "Ok"
+            |  button to confirm deletion. 
+      li[data-search-target="result"]
+        |  To 
+        b.groupsite_blue
+          | like a blog
+        |  post do the following. 
+        ol
+          li
+            |  Click 
+            b
+              | "Blogs"
+            |  in the main navigation. 
+          li
+            |  select the 
+            b
+              | appropriate blog post
+            | . 
+          li
+            |  click the 
+            b
+              | "heart icon + Like"
+            | . 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Events/Calendar 
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  The events/calendar feature allows for members to create, edit, and delete events. Here is some of the functionality of the events/calendar feature. 
+    ul
+      li
+        b.groupsite_blue
+          | Event privacy
+        |  can be set to private (user only) or public (group members) when creating or editing an event. To do so do the following. While creating an event do the following. 
+        ul
+          li
+            |  While 
+            b.groupsite_blue
+              | Creating An Event
+          ol
+            li
+              |  Click 
+              b
+                | "Calendar"
+              |  in the main navigation. 
+            li
+              |  click the 
+              b
+                | "Create Event"
+              | . button 
+            li
+              |  In the "Visibility To" dropdown select 
+              b
+                | "Private (Only Me)"
+              |  or 
+              b
+                | "Group Members"
+              | . 
+          li
+            |  While 
+            b.groupsite_blue
+              | Editing An Event
+          ol
+            li
+              |  Click 
+              b
+                | "Calendar"
+              |  in the main navigation. 
+            li
+              |  select the 
+              b
+                | appropriate event
+              | . 
+            li
+              |  click the 
+              b
+                | "Edit"
+              |  button in the top right corner. 
+            li
+              |  In the "Visibility To" dropdown select 
+              b
+                | "Private (Only Me)"
+              |  or 
+              b
+                | "Group Members"
+              | . 
+      li
+        |  Events can have a 
+        b.groupsite_blue
+          | location, name, details, and attachments.
+        ul
+          li
+            |  This information can be added while creating or editing an event on the Events page. Add the desired information in the appropriate fields. 
+      li
+        |  Events can have attendees invited via 
+        b.groupsite_blue
+          | email(RSVPs)
+        | . To do so do the following while creating or editing an event from the Event's page( 
+        em
+          | you can get there by clicking "Calendar" in the main navigation &gt;&gt; creating a new event or selecting an event
+        | ). 
+        ul
+          li
+            b.groupsite_blue
+              | Setting up RSVP
+            |  for an event 
+            ol
+              li
+                |  Toggle the "RSVPs"? to green 
+              li
+                |  Click the button 
+                b
+                  | "Update Event"
+                | . 
+              li
+                |  On the next page click the 
+                b
+                  | "Send an RSVP Invitations To Members &gt;&gt;"
+                |  button. 
+              li
+                |  Enter a 
+                b
+                  | desired message
+                |  to be in the RSVP email. 
+              li
+                |  Click the 
+                b
+                  | "Send"
+                |  button. 
+          li
+            |  Users can RSVP to an event by clicking the 
+            b
+              | "Yes" or "No" or "Maybe"
+            |  buttons in the event details page. 
+          li
+            |  Users can edit their RSVP response by clicking 
+            b
+              | "Change My Response"
+            | . 
+          li
+            |  User can choose if they will bringing additional people to the event in the 
+            b
+              | "Bringing Someone With You"
+            |  section. 
+          li
+            |  Events attendees and details can be viewed on the "Events" page. Or by exporting the event to a calendar application such as Google Calendar, Apple Calendar, or Outlook. 
+      li
+        |  Events can be 
+        b.groupsite_blue
+          | categorized with colors
+        |  when creating or editing an event from the Event's page. 
+        ol
+          li
+            |  Click the 
+            b
+              | "Click here to set"
+            |  button. 
+          li
+            |  select the 
+            b
+              | desired color
+            | . 
+          li
+            |  Click the 
+            b
+              | "Save"
+            |  button. 
+      li
+        |  Events can be 
+        b.groupsite_blue
+          | filtered
+        | . To do so do the following. 
+        ul
+          li
+            |  Click the 
+            b
+              | "Filter by Type"
+            |  dropdown on the right hand side of the Events page. 
+          li
+            |  Additionally you can select a date range using the 
+            b
+              | "Jump To"
+            |  range setter. 
+          li
+            |  In the Events List view, choose the 
+            b
+              | "Order By "
+            |  dropdown and/or 
+            b
+              | "Start From"
+            |  date ranger to filter. 
+      li
+        |  Events can be set to 
+        b.groupsite_blue
+          | repeat
+        | . 
+        ul
+          li
+            |  This can be done while creating or editing an event from the Event's page. In the 
+            b
+              | "Repeat?"
+            |  dropdown select the desired repeat frequency. 
+      li
+        |  Events can be viewed in a 
+        b.groupsite_blue
+          | list or calendar view
+        | . 
+        ul
+          li
+            |  Click the 
+            b
+              | "View Style"
+            |  button on the upper right hand side of the Events page. 
+      li
+        |  Events can be 
+        b.groupsite_blue
+          | exported
+        |  to other calendars such as Google Calendar, Apple Calendar, or Outlook. 
+        ul
+          li
+            |  Click the 
+            b
+              | "Export"
+            |  button on the upper right hand side of the Events page. 
+          li
+            |  select the 
+            b
+              | desired calendar
+            | . 
+      li
+        |  At the top of the group's page events can be 
+        b.groupsite_blue
+          | searched for
+        |  using the 
+        b
+          | search field
+        | . They can be filtered through the dropdown to the right of the search field. 
+      li
+        |  Events can be 
+        b.groupsite_blue
+          | liked
+        |  by clicking the 
+        b
+          | "Like"
+        |  button in the event details page. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Group Settings 
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  Group settings is an area to manage onboarding, appearance, profile questions, additional pages, account/payment information. 
+    ul
+      li
+        b.groupsite_blue
+          | Onboarding
+        |  to the group can be managed by doing the following. 
+        ol
+          li[data-search-target="result"]
+            |  In the main navigation click 
+            b
+              | "Group Settings"
+            | . 
+          li
+            |  Under 
+            b
+              | "Main Settings"
+            |  heading and the "Membership Settings" field select the desired onboarding method from the 
+            b
+              | Membership
+            |  dropdown. 
+          li
+            |  Click the 
+            b
+              | "Update Membership Settings"
+            |  button. 
+      li
+        |  The 
+        b.groupsite_blue
+          | appearance
+        |  of the group can be managed by doing the following. 
+        ul
+          li[data-search-target="result"]
+            |  In the main navigation click 
+            b
+              | "Group Settings"
+            | . 
+          li
+            |  Under 
+            b
+              | "Appearance"
+            |  heading you are able to update the color, sidebar theme, group initials, header image, and group logo. 
+            ul
+              li
+                |  To update the 
+                b
+                  | "Group Color"
+                |  select the 
+                b
+                  | color 
+                | or use the 
+                b
+                  | color picker button and click "save"
+                | . 
+                em
+                  b[style="color:red;"]
+                    | Note
+                  | : The group color is used throughout the group to highlight buttons, links, and other elements. The sidebar theme is used to change the background color of the sidebar.
+              li
+                |  To update the 
+                b
+                  | "Sidebar Theme"
+                |  select the desired 
+                b
+                  | theme
+                |  &gt; in the 
+                b
+                  | "Main Menu Sidebar Style"
+                |  field and click the 
+                b
+                  | "Update Appearance"
+                |  button. 
+              li
+                |  To update the "Group Initials" click 
+                b
+                  | "Change Group Initials"
+                |  in the popup enter the desired initials in the
+                b
+                  | "Group Initials"
+                |  field and click the 
+                b
+                  | "Save Initials"
+                |  button. 
+              li[data-search-target="result"]
+                |  To update the 
+                b
+                  | "Group Logo"
+                |  click 
+                b
+                  | "Change Square Logo"
+                |  &gt; in the popup select or drag the desired image and click the 
+                b
+                  | "Close and Refresh Page"
+                |  button. 
+                ul
+                  li
+                    |  Here you can also remove the logo by clicking the 
+                    b
+                      | "Remove"
+                    |  button. 
+                  li
+                    |  Additionally, Cropping the logo is possible by using the 
+                    b
+                      | "Crop/Adjust Image"
+                    |  button &gt; Then click the 
+                    b
+                      | "Close and Refresh Page"
+                    |  button. 
+                  li
+                    em
+                      b[style="color:red;"]
+                        | Note
+                      | : By default Square logo use small (120x120 dimensions).
+              li[data-search-target="result"]
+                |  To update the 
+                b
+                  | "Header Image"
+                |  click the 
+                b
+                  | "Change Header Image"
+                |  button &gt; in the popup select or drag the desired image and click the 
+                b
+                  | "Close and Refresh Page"
+                |  button. 
+                ul
+                  li
+                    |  Here you can also remove the logo by clicking the 
+                    b
+                      | "Remove"
+                    |  button. 
+                  li
+                    |  Additionally, Cropping the header image is possible by using the 
+                    b
+                      | "Crop/Adjust Image"
+                    |  button &gt; Then click the 
+                    b
+                      | "Close and Refresh Page"
+                    |  button. 
+                    em
+                      b[style="color:red;"]
+                        | Note
+                      | : By default header uses large (2240x480 dimensions - 14:3 ratio).
+      li
+        b.groupsite_blue
+          | Profile questions
+        |  can be managed by doing the following. 
+        ol
+          li[data-search-target="result"]
+            |  In the main navigation click 
+            b
+              | "Group Settings"
+            | . 
+          li
+            |  Click the 
+            b
+              | "Profile Questions"
+            |  heading. 
+          li[data-search-target="result"]
+            |  Here you can 
+            b
+              | "Add New Question"
+            | , 
+            b
+              | "Edit"
+            | , 
+            b
+              | "Delete"
+            | , and 
+            b
+              | "Reorder"
+            |  the profile questions. 
+            ul
+              li
+                |  To add a new question click the 
+                b
+                  | "Add New Question"
+                |  button &gt; Enter the question in the 
+                b
+                  | "Question"
+                |  field &gt; select if the question is 
+                b
+                  | "Required?"
+                |  &gt; select the 
+                b
+                  | "Question Type"
+                |  from the dropdown &gt; click the 
+                b
+                  | "Save Changes"
+                |  button. 
+              li
+                |  To edit a question, go to that question, and 
+                b
+                  | make the necessary changes
+                |  &gt; click the 
+                b
+                  | "Save Changes"
+                |  button. 
+              li
+                |  To delete a question click the 
+                b
+                  | "Delete"
+                |  button to the right of the desired question &gt; Enter the question text in the 
+                b
+                  | "Question"
+                |  field &gt; select the type of question from the 
+                b
+                  | "Type"
+                |  dropdown &gt; Select 
+                b
+                  | "Required"
+                |  if desired &gt; click the 
+                b
+                  | "Save Changes"
+                |  button. 
+              li
+                |  To reorder questions click and hold the 
+                b
+                  | "6 dots icon"
+                |  to the left of the desired question &gt; drag and drop to the desired position. 
+      li
+        b.groupsite_blue
+          | Additional Pages
+        |  can be managed by doing the following. 
+        ol
+          li[data-search-target="result"]
+            |  In the main navigation click 
+            b
+              | "Group Settings"
+            | . 
+          li
+            |  Click the 
+            b
+              | "Additional Pages"
+            |  heading. 
+          li[data-search-target="result"]
+            |  Here you can 
+            b
+              | "Add New Page"
+            | , 
+            b
+              | "Edit"
+            | , 
+            b
+              | "Delete"
+            | , and 
+            b
+              | "Reorder"
+            |  the additional pages. 
+            ul
+              li
+                |  To 
+                i.groupsite_blue
+                  | add a new page
+                |  do the following. 
+                ol
+                  li
+                    |  Click 
+                    b
+                      | "Add New Page"
+                    |  button. 
+                  li
+                    |  Select either an 
+                    b
+                      | external page
+                    |  or a 
+                    b
+                      | groupsite module page
+                    | . External pages have a page name, external link, status, and a page icon. 
+                    ul
+                      li
+                        |  To use an external page do the following. 
+                        ol
+                          li
+                            |  In the popup select 
+                            b
+                              | "External Page"
+                            | . 
+                          li
+                            |  Enter the 
+                            b
+                              | "Page Name"
+                            |  in the page name field. 
+                          li
+                            |  Enter the desired URL in the 
+                            b
+                              | "External Link"
+                            |  field. 
+                          li
+                            |  Assign the status of additional page in the 
+                            b
+                              | "Status"
+                            |  dropdown. This will display or not display the additional page the main navigation. 
+                          li
+                            |  To assign a page icon click the 
+                            b
+                              | "Page Icon"
+                            |  button &gt; In the popup select the desired icon. 
+                          li
+                            |  click the 
+                            b
+                              | "Save"
+                            |  button. 
+                      li
+                        |  To use a groupsite module for an additional page do the following. 
+                        ol
+                          li
+                            |  In the popup select 
+                            b
+                              | "Modules"
+                            | . 
+                          li
+                            |  Enter the 
+                            b
+                              | "Page Name"
+                            |  in the page name field. 
+                          li
+                            |  Assign the status of additional page in the 
+                            b
+                              | "Status"
+                            |  dropdown. This will display or not display the additional page the main navigation. 
+                          li
+                            |  To assign a page icon click the 
+                            b
+                              | "Page Icon"
+                            |  button &gt; In the popup select the desired icon. 
+                          li
+                            |  click the 
+                            b
+                              | "Save"
+                            |  button. 
+                          li
+                            |  after you can edit the module page content by doing the following. 
+                            ul
+                              li
+                                |  Scroll over the desired page and click the 
+                                b
+                                  | "[Page Name]"
+                                | . 
+                              li
+                                |  Add modules as needed. Modules can be added by clicking the 
+                                b
+                                  | "Add Module"
+                                |  button. A popup will appear with the available modules to add. Select the desired module and click the 
+                                b
+                                  | "Add Module"
+                                |  button. 
+                  li
+                    |  Enter the page name in the 
+                    b
+                      | "Page Name"
+                    |  field. 
+                  li
+                    |  Enter the page content in the 
+                    b
+                      | "Page Content"
+                    |  field using the rich text editor. 
+                  li
+                    |  Click the 
+                    b
+                      | "Save Changes"
+                    |  button. 
+              li
+                |  To 
+                i.groupsite_blue
+                  | edit a page
+                | , go to that page, and 
+                b
+                  | make the necessary changes
+                |  &gt; click the 
+                b
+                  | "Save Changes"
+                |  button. 
+              li
+                |  To
+                i.groupsite_blue
+                  |  delete a page
+                |  click the 
+                b
+                  | "Delete"
+                |  button to the right of the desired page &gt; In the popup dialog click the 
+                b
+                  | "Ok"
+                |  button to confirm deletion. 
+              li
+                |  To 
+                i.groupsite_blue
+                  |  reorder pages
+                |  click and hold the 
+                b
+                  | "6 dots icon"
+                |  to the left of the desired page &gt; drag and drop to the desired position. 
+      li[data-search-target="result"]
+        b.groupsite_blue
+          | Account and Payment Information
+        |  can be managed by doing the following. 
+        ol
+          li
+            |  In the main navigation click 
+            b
+              | "Group Settings"
+            | . 
+          li
+            |  Click the 
+            b
+              | "Account/Upgrade"
+            |  heading. 
+          li[data-search-target="result"]
+            |  Here you can view the "Current Plan", "Billing Cycle", "Payment Method","Amount", set default payment method, and the ability to manage your payment information. 
+            ul
+              li
+                |  To 
+                i.groupsite_blue
+                  | update payment information
+                |  do the following. 
+                ul
+                  li
+                    |  Click the 
+                    b
+                      | "Manage your Billing"
+                    |  button. This will take you to the 
+                    b
+                      | Stripe Billing Portal
+                    | . Here you can 
+                    i.groupsite_blue
+                      |  add a new payment method
+                    | , 
+                    i.groupsite_blue
+                      |  set default payment method
+                    | , 
+                    i.groupsite_blue
+                      |  remove payment information
+                    | , 
+                    i.groupsite_blue
+                      |  update payment information
+                    | , and 
+                    i.groupsite_blue
+                      |  view invoices
+                    | . 
+                    ul
+                      li
+                        b[style="color: red;"]
+                          | Note:
+                        |  The default payment method can not be removed until another card/payment method is made the default payment method. 
+                      li
+                        |  To add a new payment method do the following. 
+                        ol
+                          li
+                            |  click the 
+                            b
+                              | "+ Add Payment Method"
+                            |  button. 
+                          li
+                            |  Enter in the 
+                            b
+                              | "Payment Information"
+                            | . 
+                          li
+                            |  Click the 
+                            b
+                              | "Add"
+                            |  button. 
+                      li
+                        |  To set a default payment method, change the credit card used do the following. 
+                        ol
+                          li
+                            |  Once more than one card has been added click the 
+                            b
+                              | "3 Horizontal Dots"
+                            |  to the right of the desired payment method. 
+                          li
+                            |  Click 
+                            b
+                              | "Make Default"
+                            |  button. 
+                      li
+                        |  To remove a payment method do the following. 
+                        ol
+                          li
+                            |  Click the 
+                            b
+                              | "3 Horizontal Dots"
+                            |  to the right of the desired payment method. 
+                          li
+                            |  Click the 
+                            b
+                              | "Delete"
+                            |  button. 
+                          li
+                            b[style="color: red;"]
+                              | Note:
+                            |  The default payment method can not be removed until another card/payment method is made the default payment method. 
+              li[data-search-target="result"]
+                |  To update/upgrade your group's subscription plan do the following in the "Account/Upgrade" section. 
+                ul
+                  li
+                    |  Use the slider 
+                    b
+                      | "Slide to Add More Capacity"
+                    |  to move left or right to adjust the subscription for storage, members, and subgroups. 
+                  li
+                    |  Click the 
+                    b
+                      | "Select Plan"
+                    |  button.. 
+                  li
+                    |  Select 
+                    b
+                      | monthly
+                    |  or 
+                    b
+                      | yearly
+                    |  billing cycle. 
+                  li
+                    |  Click the 
+                    b
+                      | "Subscribe"
+                    |  button. 
+            - #  END OF upDATE PAYMENT INFORMATION
+          li[data-search-target="result"]
+            |  To 
+            i.groupsite_blue
+              | view invoice(s) and billing history
+            |  click the 
+            b
+              | "Manage your Billing"
+            |  button. 
+            ol
+              li[data-search-target="result"]
+                |  This will take you to the 
+                b
+                  | Stripe Billing Portal
+                | . 
+              li[data-search-target="result"]
+                |  In the 
+                b
+                  | "Invoices History"
+                |  section you can view and click invoices. The page after clicking allows for downloading invoices or downloading receipts for individual payments. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Manage Members 
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  The manage members section allows for group managers to setup onboarding processes for the group. From this section managers can invite new members, manage current members, and handle invitations and membership requests. 
+    ul
+      li
+        |  To 
+        b.groupsite_blue
+          | manage members
+        |  do the following. 
+        ol
+          li
+            |  In the main navigation click 
+            b
+              | "Manage Members"
+            | . 
+          li
+            |  Here you have headers for 
+            b
+              | "Members"
+            | , 
+            b
+              | "Invitations"
+            b
+              | "Invite New Members"
+            | , and 
+            b
+              | "Membership Requests"
+            | . 
+            ul
+              li
+                |  In the "Members" section you can view and manage current members. 
+                ul
+                  li
+                    |  You can search for members using the search field. Searches can be done for name, company, title, or email. 
+                  li
+                    b.groupsite_blue
+                      | Exporting members
+                    |  is possible by clicking 
+                    b
+                      | "CSV"
+                    |  or 
+                    b
+                      | "Excel"
+                    | . This will export a CSV file with member information. 
+                  li
+                    b.groupsite_blue
+                      | Bulk editing members
+                    |  is possible by doing the following. This includes restoring, suspending, or removing members. 
+                    ul
+                      li
+                        |  Select the 
+                        b
+                          | desired members
+                        |  using the checkboxes to the left of the member's name 
+                      li
+                        |  Select the desired member(s), using the checkboxes to the left of the members' name 
+                      li
+                        |  click the 
+                        b
+                          | "Edit Multiple"
+                        |  button to the right of the page. 
+                      li
+                        |  click one of the 3 
+                        em
+                          | status
+                        |  buttons of 
+                        b
+                          | "Restore [selected#] Member(s)", "Suspend [selected#] Member(s)", or "Remove [selected#] Member(s)"
+                        | . 
+                      li
+                        |  in the popup click the 
+                        b
+                          |  "[status] Members"
+                        |  button. 
+                  li
+                    |  You can filter members using the 
+                    b
+                      | "Filter"
+                    |  dropdown. Filter options include 
+                    b
+                      | "Suspended"
+                    | , 
+                    b
+                      | "Managers"
+                    | , 
+                    b
+                      | "Members"
+                    | , 
+                    b
+                      | "Bouncing"
+                    | , and 
+                    b
+                      | "All"
+                    | . Filtering for subgroups can be done through the 
+                    b
+                      | "Subgroup"
+                    |  dropdown. 
+                  li
+                    |  You can change a member's status by clicking the 
+                    b
+                      | "edit icon"
+                    |  to the right of the member &gt; in the 
+                    b
+                      | "Status"
+                    |  dropdown select member or manager &gt; click the 
+                    b
+                      | "Save Changes"
+                    |  button. 
+                  li
+                    |  You can remove a member by clicking the 
+                    b
+                      | "edit icon"
+                    |  to the right of the member &gt; click the 
+                    b
+                      | "Remove [member name] from [group name]"
+                    |  button to the right of the desired member. 
+              li[data-search-target="result"]
+                |  In the 
+                b.groupsite_blue
+                  | "Invitations"
+                |  section you can view, manage, and export sent invitations. 
+                ul
+                  li
+                    |  You can search for invitations using the search field. Searches can be done for name or email. 
+                  li
+                    em.groupsite_blue
+                      | Exporting invitations
+                    |  is possible by clicking 
+                    b
+                      | "CSV"
+                    |  or 
+                    b
+                      | "Excel"
+                    | . Sent invitations can be filtered for all, pending, accepted, declined, and bouncing. Exporting would be filtered on the option chosen. Information includes the invitee's name, email, inviter's name, inviter's email, status, and date invited. 
+                  li
+                    |  You can filter invitations using the 
+                    b
+                      | "Filter"
+                    |  dropdown. Filter options include 
+                    b
+                      | "Pending"
+                    | , 
+                    b
+                      | "Accepted"
+                    | , 
+                    b
+                      | "Expired"
+                    | , and 
+                    b
+                      | "All"
+                    | . 
+                  li
+                    |  You can resend an invitation by clicking the 
+                    b
+                      | edit icon
+                    |  to the right of the invitation &gt; click 
+                    b
+                      | "resend"
+                    | . 
+                  li
+                    |  You can 
+                    b
+                      | cancel an invitation
+                    |  by clicking the 
+                    b
+                      | edit icon
+                    |  to the right of the invitation &gt; click 
+                    b
+                      | "withdraw"
+                    | . 
+          li[data-search-target="result"]
+            |  In the 
+            b.groupsite_blue
+              | "Invite New Members"
+            |  section you can send invitations to new members. To invite member or 
+            b
+              |  members 
+            | do the following. 
+            ol
+              li
+                |  In the main navigation click 
+                b
+                  | "Manage Members"
+                | . 
+              li
+                |  Click the 
+                b
+                  | "Invite New Members"
+                |  button. 
+              li
+                |  Enter the email addresses of the desired invitees in the 
+                b
+                  | "List recipient email addresses separated by space or commas"
+                |  field. Multiple email addresses can be entered by separating them with a space or comma. 
+              li
+                |  Enter message template if desired in the 
+                b
+                  | "Message Template (optional)"
+                |  dropdown. This message will be included in the invitation email. 
+              li
+                |  Enter a Subject name. Enter content of the invitation email in the 
+                b
+                  | "Subject"
+                |  field. 
+              li
+                |  Enter the content of the invitation email in the 
+                b
+                  | "Content"
+                |  field. You can use the default message or customize it as needed. 
+              li
+                |  Select the desired subgroup from the 
+                b
+                  | "Subgroup (optional)"
+                |  dropdown. This will assign the invitee to the selected subgroup upon joining. 
+              li
+                |  Click the 
+                b
+                  | "Send Invitations"
+                |  button. Invitations will be sent to the provided email addresses. 
+          li[data-search-target="result"]
+            |  In the 
+            b.groupsite_blue
+              | "Membership Requests"
+            |  section you can view and manage pending membership requests. To manage membership requests do the following. 
+            ol
+              li
+                |  In the main navigation click 
+                b
+                  | "Manage Members"
+                | . 
+              li
+                |  Click the 
+                b
+                  | "Membership Requests"
+                |  heading. 
+              li
+                |  Here you can export, view, approve, or decline membership requests. 
+                ul
+                  li
+                    em.groupsite_blue
+                      | Exporting Membership Requests
+                    |  is possible by clicking 
+                    b
+                      | "CSV"
+                    |  or 
+                    b
+                      | "Excel"
+                    | . Sent invitations can be filtered for all, pending, accepted, declined, and bouncing. Exporting would be filtered on the option chosen. Information includes the invitee's name, email, inviter's name, inviter's email, status, and date invited. 
+                  li
+                    |  You can search for membership requests using the search field. Searches can be done for name or email. 
+                  li
+                    |  You can filter membership requests using the 
+                    b
+                      | "Filter"
+                    |  dropdown. Filter options include 
+                    b
+                      | "Pending"
+                    | , 
+                    b
+                      | "Approved"
+                    | , 
+                    b
+                      | "Declined"
+                    | , and 
+                    b
+                      | "All"
+                    | . 
+                  li
+                    |  You can approve a membership request by clicking the 
+                    b
+                      | "Review"
+                    |  in the edit field &gt; click the 
+                    b
+                      | "Approve"
+                    |  button. 
+                  li
+                    |  You can decline a membership request by clicking the 
+                    b
+                      | "Review"
+                    |  in the edit field &gt; click the 
+                    b
+                      | "Decline"
+                    |  button. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Analytics 
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  The analytics section provides insights into group activity, member engagement, and content interaction. This section helps group managers understand how members are interacting with the group and its content. You can view analytics on from the sign ups, member activity, discussion, files, calendar, media, and blog features. 
+    ul
+      li
+        |  To 
+        b.groupsite_blue
+          | view analytics
+        |  do the following. 
+        ol
+          li
+            |  In the main navigation click 
+            b
+              | "Analytics"
+            | . 
+            ol
+              li
+                |  Use the date range selector to customize the data view as needed. 
+              li
+                |  Click on the desired analytics header (e.g., sign ups, member activity, discussion, files, calendar, media, blog). 
+              li
+                |  Each header provides specific insights and metrics related to that aspect of group activity. A link is provided to each individual activity in the analytics searched. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Email Members, Group Email, Email Blast 
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  The email members section allows group managers or members(
+      em
+        | setting in "Group Settings" to adjust permissions
+      | ) to send emails to all members or specific subgroups. Additionally, emails can be sent as a discussion post in the group's discussion section. This feature is useful for sending announcements, updates, or important information to group members. Drafts can be saved and edited before sending. Sent Emails can be managed. Also known as group email or email blasts. This is an upgraded feature. Please contact 
+      a[href="mailto:support@groupsite.com"]
+        | support@groupsite.com
+      |  for more information. 
+    ul
+      li
+        |  To 
+        b.groupsite_blue
+          | email members
+        |  do the following. 
+        ol
+          li[data-search-target="result"]
+            |  In the main navigation click 
+            b
+              | "Email Members"
+            | . Here you are taken to the default header "
+            b
+              | Email Members
+            | " where you can send an email to all members or specific subgroups 
+          li[data-search-target="result"]
+
+          li
+            |  Enter the email subject in the 
+            b
+              | "Subject"
+            |  field. 
+          li
+            |  Enter the email content in the 
+            b
+              | "Message Content"
+            |  field using the rich text editor. 
+          li
+            |  Select either 
+            b
+              | "Send To All Group Members"
+            | (default) or 
+            b
+              | "Send to Specific Subgroup"
+            |  dropdown. If "Send to Specific Subgroup is selected, choose the desired subgroup. 
+          li
+            |  You can use the attach files to the email by clicking the 
+            b
+              | "Attach Files"
+            |  button and selecting the desired files from your computer. 
+          li
+            |  Create a discussion from the group email by checking the 
+            b
+              | "Create new discussion from this blast"
+            |  checkbox. If selected, choose the discussion you would like to use from the dropdown. This will create a new discussion thread in the group's discussion section with the email content. 
+          li
+            |  Click the 
+            b
+              | "Save and Preview"
+            |  button to review the email before sending. 
+          li
+            |  Click the 
+            b
+              | "Send Email"
+            |  button. This will send the email to all group members or the selected subgroup. Additionally, you can edit the email from here before sending. 
+      li[data-search-target="result"]
+        |  The 
+        b.groupsite_blue
+          | "Sent Emails"
+        |  section allows you to view and manage previously sent emails from the "Email Members" section. 
+        ol
+          li[data-search-target="result"]
+            |  In the main navigation click 
+            b
+              | "Email Members"
+            | . 
+          li
+            |  Click the 
+            b
+              | "Sent Emails"
+            |  heading. 
+          li[data-search-target="result"]
+            |  Here you can view, edit, and delete sent emails. 
+            ul
+              li
+                |  You can view the details of a sent email by clicking the 
+                b
+                  | "View"
+                |  button to the right of the email. This will show the email content, recipients, and date sent. 
+              li
+                |  You can edit a sent email by clicking the 
+                b
+                  | "Edit"
+                |  button to the right of the email. This will allow you to make changes to the email content and resend it. 
+              li
+                |  You can delete a sent email by clicking the 
+                b
+                  | "Delete"
+                |  button to the right of the email. In the popup dialog click the 
+                b
+                  | "Ok"
+                |  button to confirm deletion. 
+      li[data-search-target="result"]
+        |  The 
+        b.groupsite_blue
+          | "Email Drafts"
+        |  section allows you to view and manage email drafts that have been saved. 
+        ol
+          li[data-search-target="result"]
+            |  In the main navigation click 
+            b
+              | "Email Members"
+            | . 
+          li
+            |  Click the 
+            b
+              | "Email Drafts"
+            |  heading. Here you can view, edit, and delete email drafts. 
+          li[data-search-target="result"]
+            ul
+              li
+                |  You can view the details of a draft email by clicking the 
+                b
+                  | "Preview and Send"
+                |  button to the right of the email. This will show the email content, recipients, and date saved. You can also send the email from this view. 
+              li
+                |  You can edit a draft email by clicking the 
+                b
+                  | "Edit"
+                |  button to the right of the email. This will allow you to make changes to the email content and save it as a draft and send. 
+              li
+                |  You can delete a draft email by clicking the 
+                b
+                  | "Delete"
+                |  button to the right of the email. In the popup dialog click the 
+                b
+                  | "Ok"
+                |  button to confirm deletion. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Data Export 
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  The data export section allows group managers to export various types of group data for analysis or record-keeping purposes. This includes exporting member lists, discussion posts, files, calendar events, media, and blog posts. The exported data can be downloaded in JSON or XML format. Members can be exported in CSV format. Files can be exported in a ZIP file. This feature is useful for backing up data or migrating it to another platform. This is an upgraded feature. Please contact 
+      a[href="mailto:support@groupsite.com"]
+        | support@groupsite.com
+      |  for more information. 
+    ul
+      li
+        |  To 
+        b.groupsite_blue
+          | export data
+        |  do the following. 
+        ol
+          li
+            |  In the main navigation click 
+            b
+              | "Data Export"
+            | . 
+          li
+            |  Here you can export data for 
+            b
+              | "Members"
+            | , 
+            b
+              | "Discussions"
+            | , 
+            b
+              | "Files"
+            | , 
+            b
+              | "Calendar Events"
+            | , 
+            b
+              | "Media"
+            | , and 
+            b
+              | "Blog Posts"
+            | . 
+            ul
+              li
+                |  Click the desired data type header (e.g., Members, Discussions, Files, Calendar Events, Media, Blog Posts). 
+              li
+                |  Select the desired file format from the dropdown (e.g., JSON, XML for most data types; CSV for Members; ZIP for Files). 
+              li
+                |  The file will be available for download in the 
+                b
+                  | "Recent Data Exports"
+                |  section, once the export is complete. 
+              li
+                |  Once download is completed click the 
+                b
+                  | "The file name"
+                |  to download the file. 
+              li
+                em[style="color: red;"]
+                  |  Note
+                | : This may take several minutes for processing. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Private Messaging 
+    .groupsite_blue.subtitle.is-5[data-search-target="result"]
+      |  The private messaging section allows group members to send direct messages to each other within the group. This feature facilitates private communication between members without the need for external email or messaging platforms. Members can view their inbox, sent messages, and compose new messages. They can also manage their conversations and delete messages as needed. Email notifications can be enabled for new messages. 
+    ul
+      li
+        |  To 
+        b.groupsite_blue
+          | use private messaging
+        |  do the following. 
+        ol
+          li
+            |  In the top right corner click the message 
+            b
+              | "Private Messaging"
+            |  icon. 
+          li
+            |  Here you can send messages to other members, view conversation history, and messages created by the member. 
+            ul
+              li
+                |  Search for members using the 
+                b
+                  | search field
+                |  in the left column. 
+              li
+                |  Or select the member's name to view the conversation history with that member and continue the conversation. 
+              li
+                |  In the 
+                b
+                  | "Reply"
+                |  field enter your message. 
+              li
+                |  Click the 
+                b
+                  | "Send"
+                |  button to send the message. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Reactivate a Disabled Account 
+    ol
+      |  Please contact 
+      a[href="mailto:support@groupsite.com"]
+        | support@groupsite.com
+      |  for assistance with reactivating your account. 
+    .groupsite_blue.subtitle.is-3[data-search-target="result"]
+      |  Cancel Groupsite Account/Cancel Subscription 
+    ol
+      li
+        |  Please contact 
+        a[href="mailto:support@groupsite.com"]
+          | support@groupsite.com
+        |  for canceling your groupsite subscription. 
+      li
+        em[style="color: red;"]
+          |  Note
+        | : Cancelled Groupsites' data will remain on our servers. Groupsite Managers would be responsible for deleting any data associated with their groupsite before the end of the subscription. We do not share or sell any data to third parties. 

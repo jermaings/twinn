@@ -1,0 +1,8 @@
+<div class="content menu-container">
+    <%  @showCategory.each do |list| %>
+        <p style="display:flex; flex-flow: column wrap; gap: 1em; justify-content: center; align-items: center; ">
+            <%= list.name %>
+            <%= image_tag list.image %>
+        </p>
+    <% end  %>
+</div>

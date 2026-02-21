@@ -1,0 +1,5 @@
+{
+  "controllers": ["./app/javascript/controllers"],
+  "eager_loading": true
+}
+    

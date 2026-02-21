@@ -1,0 +1,133 @@
+FAQs
+
+1. Not receiving emails from your groupsite.
+    a. Please ensure that you are subscribed to a platform event to get emails. To 	check your subscriptions do the following once logged in. scroll over the user icon in top right corner > click My Subscriptions. Here you can toggle on and off things you would like emails for. 
+    b. If you have subscriptions turned on and are still not receiving emails, please contact support@groupsite.com. Also please ensure emails from groupsite.com are allowed through your network and/or email program. If emails are returned to our platform as undeliverable, emails will cease to be delivered to that email address. Contacting support@groupsite.com can address this issue.
+    c. If you are not receiving emails from a discussion forum topic. Please ensure you are following the topic
+        You can do so in two way.
+
+2. Changing or adding more than one email address
+    - To update an email address do the following once logged. Click the user account icon in the top right corner > click My Account > under Logins/Emails click "+ Add Email Address > enter the new email address in the pop up and click Save > Go to your new email address > open email from mailer@groupsite.com and click "Verify My Email".
+
+3. Forgot password
+    - If you have forgotten or need to update your password you can go to the login page of your groupsite, and click "forgot password" in the Password field. This will send a password reset to your email address. Please ensure the spelling is correct for your email address.
+
+4. Uploading files - files can uploaded to the File Cabinet. Maximum file size is 175MB. Files can be uploaded to the File Cabinet through the drag and drop feature. By clicking and uploading a file from your computer, or adding file to a feature, such as the Dashboard.
+	a. Dragging and Dropping - Once logged into your group do the following. Click "Files" > select a folder > drag a file from your computer to the section "DRAG OR CLICK HERE TO UPLOAD". 
+	b. Single File Upload - Once logged into your group do the following. Click "Files" > select a folder > click "DRAG OR CLICK HERE TO UPLOAD" > Select a folder to upload into > click "Upload File(s) into...". 
+	c. When adding a single file on the various features of the Dashboard, Discussions, Media Gallery, Blogs, etc. a folder is created in the File Cabinet that is viewable only to manager but can not be modified. These folders are used by the platform to display the files in its relative feature. The folders will have a key symbol on them and titled "User Created Content".
+
+
+5. Uploading files to the Dashboard/Displaying Images and Videos(a,b) - The following are the ways users can upload files to the dashboard by using the various dashboard modules.  
+	a. Free Text Module - click "Free Text" > under "Event Details" in the header click one of last two icons. The paper clip icon will attach files from your computer and will be displayed as an image or video on the dashboard. The last icon, the file browser will choose a file from the group's File Cabinet, and will show a link that once clicked will go the file and display the file. Files that can not be processed by the browser will need to be downloaded to be viewed completely. Such as Excel or Power Point. 
+	b. Free Text(HTML) - Using this module you could control how the size of the image/s or Video/s displayed. To use an image from the File Cabinet first would need to obtain the URL to the file. Second, go to the dashboard and add a free text module. When adding the module, an HTML <img> tag would need to be used. To do so do the following once logged in as a manager. 
+		1. Obtain the URL of the file - Click "File Cabinet" > find the image desired > scroll over the 3 horizontal dots to the right of the file > click "Share" > copy the link > 
+		2. Create Free Text(HTML) Module with <img> tag - Once the URL is copied click "Add Module" on the dashboard > click "Free Text(HTML)" > Add a title in the "Title" field > in the "HTML Code" field add the following and paste the URL copied in step one between the parenthesis be /preview. <img src="/preview">. By adding a width and height attribute to the image would allow some control over the size of the image displayed. Example is as follows with the copied file's URL between the parenthesis after src. <img src="" width="600" height="500">. Note the image will maintain the same aspect ratio.
+            - To view images and videos /preview needs to be added to the copied file's URL. In example <img src="https://jermaintest.groupsite.com/files/1106075/preview">
+            - The tag to use to view image is <img src="FILE'S_URL/preview">
+            - The tag to use to view video is <video><source src="FILE'S_URL/preview"></video>
+            - width and height attributes can be used to adjust the sizing of the image or video. Example <img src="FILE'S_URL/preview" width="50%" heigh="50%">
+    c. Media Gallery Module - Click "Add Module" > click "Media Gallery" > Add a title in the "Title" field > In the "Gallery" field dropdown select the gallery desired. The collage of images will link to the gallery to view the images individually. 
+	d. File Cabinet Files Module - Click "Add Module" > click "File Cabinet Files" > Add a title in the "Title" field > In the "View" field dropdown select "Select Files" or "Recent Files" Recent files will display the last files chosen. The amount displayed is determined in the "# Of Items" field dropdown. When choosing "Select Files" click "Choose Files" button and select the file/s desired. The files will be displayed as a link. Once clicked the file will open up a page to display the file or give option to download(i.e. Excel, PowerPoint).
+
+6. Pricing - There are two account types. Enterprise and regular. 
+	a. Regular account the cost is $99 per month or $990 annually. This package includes 1 groupsite, 4 managers for the groupsite, unlimited users, 40GB of storage space, 4 subgroups. For an additional $10 a month or $100 yearly the following would be added to the groupsite 1 manager, 10GB of storage, and 1 subgroup. 
+	b. Enterprise account - Contact billing@groupsite.com for a package that works for your needs. 
+        Enterprise accounts would include multiple groupsites under one account. More information can be found by going to groupsite.com/pricing and scrolling down to the section "Groupsite Enterprise Platform". Here you will see a list of full packages available and pricing. These packages can be downgraded and adjusted to fit your budget and needs.
+
+7. Payment - 
+    a. Manual Billing and contractual options please contact billing@groupsite.com
+    b. Online payments can be done by doing the following once logged in as manager. Click "Group Settings" > click "Account/Upgrade" > select a plan > click "Add Payment Method" > proceed to enter in the payment information. 
+    c. Updating the payment information can be done by the following once logged in as a manager. Click "Group Settings" > click "Account/Upgrade" > click "Manage Your Billing" > to the right of the credit card click the edit icon > select "Add Payment Method" > enter in payment information and click "Update". After make make the new card the primary card to be used. Also remove the old card if desired.
+
+8. Designing the Dashboard page - The dashboard page is designed by adding modules. The modules for the dashboard are from the various features of the group. You can add modules to connect to file cabinet, discussions, calendar, recent activity, media gallery, blogs, subgroups, and members hightlight. 
+
+9. Dashboard Modules - List of the modules used for the dashboard page and their functionality.
+    a. Group Blog: Featured Post - This will display the post/blog of your choosing from the "Blogs" feature. There must be blogs created. 
+        To do so do the following on the dashboard. Click "Add Module" > click "Group Blog: Featured Post" > click "Select a featured blog" dropdown and select the blog desired. > click "Save Module" 
+    b. Group Blog: Recent Post - This will give the ability as in the above "Featured Post" module. Additionally you can recent posts that have been uploaded to Blogs.
+        To do so do the following on the dashboard. Click "Add Module" > click "Group Blog: Recent Post" > in the "View" field dropdown select "Recent Posts" > in the "# of Itmes" field dropdown select the recent posts you would like to have displayed. 
+    c. Discussions Feature Topic - The discussions "Feature Topic" gives the ability to display a specific topic from the Discussions feature.
+        To do so do the following on the dashboard. Click "Add Module" > click "Discussions: Featured Topics" > Add a title in the "Title" field > select a topic from the dropdown field in "Select a Topic" > click "Save Module".
+    d. Discussions Popular Topics - This module gives the ability to display a chosen number of popular, recent, or new topics from a specific discussion. 
+        To do so do the following on the dashboard. Click "Add Module" > click "Discussions: Popular Topics" > Add a title in the "Title" field > choose a discussion from the dropdown in the "Forum" field > choose what to display from the dropdown in the "View" field > select how many items to display in the dropdown in the "# of Items" field > click "Save Module".
+    e. Members: Member Highlight - This module gives the ability to show a member's profile on the dashboard for all to see.
+        To do so do the following on the dashboard. Click "Add Module" > click "Members: Member Highlight" > Add a title in the "Title" field > select a member from the dropdown in the "Member" field > click "Save Module".
+    f. Members: Featured Members - This module gives the ability show a specific number of members based on the categories of the last online, currently online, most active contributors, most active visitors. 
+        To do so do the following on the dashboard. Click "Add Module" > click "Memberss: Featured Members" > Add a title in the "Title" field > select a category of members to be displayed in the "View" dropdown > select the number of items to show from the "# of Items" field > click "Save Module".
+    g.  Subgroups: Featured Subgroup - This module shows a card that links to the subgroup that is displayed.
+        To do so do the following on the dashboard. Click "Add Module" > click "Subgroups: Featured Subgroup" > Add a title in the "Title" field > select a subgroup in the dropdown from the "Select a Subgroup" field > click "Save Module".
+    h. Subgroups: Featured Subgroups - This module a chosen number of subgroups to be listed from categories of most members, newest, recently active. 
+        To do so do the following on the dashboard. Click "Add Module" > click "Subgroups: Featured Subgroups" > Add a title in the "Title" field > select the category from the "View" field dropdown > select how many subgroups to display from the dropdown field "# of Items" > click "Save Module".
+    i. Calendar: Recent Events - This module displays a chosen number of upcoming calendar events from the calendar feature.
+        To do so do the following on the dashboard. Click "Add Module" > click "Calendar: Recent Events" > Add a title in the "Title" field > select how many events to show in the "# of Items" field > click "Save Module".
+    j. This Group Consist of - This module is used to dispay 3 card links to specific features from the group.
+        To do so do the following on the dashboard. Click "Add Module" > click "This Group Consists Of" > Add a title in the "Title" field" > Columns 1, 2, and 3 dropdowns select a feature > click "Save Module".
+    k. Video Embed - This module allows for an embedded video to be displayed.
+        To do so do the following on the dashboard. Click "Add Module" > click "Video Embedd" > Add a title to the "Title" field > enter in the embedded code in the "Video Embed Code" area > click "Save Module".
+    l. Free Text - This module allow for text, files, links to be uploaded and some basic styling of the text.
+        To do so do the following on the dashboard. Click "Add Module" > click "Free Text" > Add a title in the "Title" field > enter in desired text > highlight text and select a icon in the header for styling > use the file browser icon to add a link, and the paper clip icon the display a image or video > click "Save Module". 
+    m. Free Text (HTML) - This module allows for text, and some html tags to be used to display information. This allows for more control over the size of information being displayed.
+        To do so do the following on the dashboard. Click "Add Module" > click "Free Text (HTML)" > add a title in the "Title" field > enter in the text and html desired > click "Save Module". 
+    n. Media Gallery - This module displays a collage which links to a folder of images in the media gallery.
+        To do so do the following on the dashboard. Click "Add Module" > click "Media Gallery" > Add a title in the "Title" field > select a photo gallery from the "Gallery" dropdown > click "Save Module".
+    m. Shared Links - This module displays card links to URLs.
+        To do so do the following on the dashboard. Click "Add Module" > click "Shared Links" > click "Save Module" > add a title in the "Title" field > In the "Link" field add a URL > click "Add Link" > repeat process to add as many links as needed > click "Save Module".
+    o. File Cabinets Files - This module allows for links to files in the file cabinet. 
+        To do so do the following on the dashboard. Click "Add Module" > click "File Cabinet Files" > add a title in the "Title" field > select a category in the "View" field drodown > To select specific files choose "Select Files" in "View" dropdown > click "Choose File" > select files desired. For recently uploaded files select "Recent Files" in the "View" dropdown > select how many to be display from the "# of Items" field > click "Save Module".
+    p. Recent Activity - The module displays a chosen number of card link/s from all, or a single category from the recent activity feature. This module includes a paginations that will show the specified number of items at a time while paginating through the recent activity feed.
+        To do so do the following on the dashboard. Click "Add Module" > click "Recent Activity" > add a title in the "Title" field > select what category to display from the "View" dropdown > select how many feeds to be displayed at once by selecting from the "# of Items" dropdown field > click "Save Module".
+
+10. My Account section - this feature gives access to a member's account information for viewing or editing. 
+    a. Here you add and remove email addresses associated with the account.
+    b. You can change your password by click "Change Password" and following instructions.
+    c. Update user personal information for the account. 
+    d. Upload profile files
+    e. select who can view those files
+    f. create or edit a short Biography
+
+11. My Memberships section - This section shows what groups the account is associated with.
+    a. Pending invitations, and requests for groups and subgroups are displayed here.
+    b. Shows personal information being displayed for each group.
+    c. Allows the option to select a different associated email address for each group.
+
+12. My Subscription Section - This sections controls what emails are received by you from the platform.
+    a. Adjust the frequency of emails for the recent activity feature.
+    b. Select if you want emails from private messages
+    c. Select if user wants emails from RSVPs
+    d. Select if user wants emails from discussions
+
+13. Searching - At the top of your groupsite is a search field with a dropdown. The dropdown allows you to choose what section of the groupsite to search. The search field text will search the group for the string of text entered.
+
+14. File Size Limit - 175MB
+
+15. File Permissions - Members can upload files to their profile or to the file cabinet(if allowed by managers settings). 
+    a. When uploading files to a member's profile the member can make the files viewable to all, managers, or just yourself.
+        To do so when logged in do the following. Scroll over the user icon in the right corner > click "My Account" > Scroll down to the section "Profile Uploads Visibility" > select desired setting. 
+    b. Folders in the a group's file cabinet, under the "Files" tab, can be set to manager's only, or to members and manager.
+16. **SSO**(Need to fix URL for documentation) - Sigle Sign On for organizations is possible. This gives groups the ability to have users sign into Groupsite from another location. So that there is one central place users log in. The user data base is maintained by the group, not Groupsite. Through a secure connection the user data is forwarded to Groupsite's platform. The user data would include personal information(i.e. name, email), groupsites memberships, and subgroup memberships.  More information can be found 
+    To further details regarding SSO please visit <a href="https://groupsite.com/sso_setup"groupsite.com/sso_setup</a>
+17. Inviting Members to group - Inviting members to your groupsite can be done in a few ways through adjusting the "Membership" field under Membership Settings. All email addresses must be verified no matter the setting.
+    To do so, once logged in go to "Group Settings" > under the Main Settings > "Membership Settings" section select the type of onboarding in the "Membership" dropdown.
+    a. "Invitation and Approved Request" - This allows users to request a membership to the group or managers to send invitations to users for group membership.
+        To do so through approved request, user would click a "Join Now" button on the groupsite page. This would generate an email to the managers of the group. A manager would be given the ability to accept or decline the request. For Invitation see "Invitation Only".
+    b. "Invitation Only" - This only allows membership through a managers' invitations.
+        To do so managers could click the person+ icon in the top right corner or click "Manage Memebers" > click "Invite New Memmbers" > Here you can enter in email addresses separated with a comma > Create and use a message template if desired through "Message Template" section > add title in the "Subject" field > Enter in text desired in the "Content" field > select any subgroups you would like the user/s to be a part of > click "Send Invitations. 
+    c. "Anyone Can Join" - This allows users to click a join button when on the groupsite that allows them to click a "Join Now" button.
+        To do so once the join button is click on the group's page the user will go through the steps of verifying their email address, and any profile questions setup by group managers. After the user would be a member. 
+
+18. What is a subgroup - a subgroup is a group within a groupsite. Such as a organizations may have various departments. A subgroup could be an accounting department area for secure communications from the rest of group. Or the subgroup could be the companies events planning area. Which could include all members of the group. 
+    - Features of subgroups are as follows
+        a. as with groups subgroups have the following features: dashbaord, discussions, calendar, file cabinet, media gallery
+        b. Subgroup settings - an area to manage subgroup permissions for onboarding, appearance, name, visibility.
+            - subgroup managers would adjust the "Mebership Settings" for the subgroup membership.
+                To do so do the following once in the subgroup. Click "Manage" in the upper right side > click "Edit Subgroup" > Under the "Basic Settings" in "Membership" dropdown select the appropriate option > click "Update Subgroup".
+            - subgroup managers have ability to control various features for the use of the subgroup.
+                To do so do the following once in the subgroup. Click "Manage". Here under the header "Edit Subgroup" there are several sections. Members, Invitations, Membership Requests, Profile Questions, Edit Subgroup.
+        c. The ability to choose to display a subgroup to non subgroup members on the subgroup page.
+            To do so do the following once in the subgroup. Click "Manage" in the upper right side > click "Edit Subgroup" > Under Subgroup Visibility the "Visibility" section "Directory" field select Disabled.  
+        d. subgroup onboarding/becoming a subgroup member/creating subgroup members - all subgroup members would need to be a part of the group
+            - group managers can make group members a part of a subgroup without invitation or approved request by doing the following.
+                Click "Manage Members" > find the member desired > click the edit icon to the right of the member > scroll down to the subgroup section and in the "Status" dropdown select the appropriate option.
+            - group members can become part of a subgroup by clicking the subgroup tab on the group's page > Click "Request Membership" on the subgroup desired. Depending on subgroup settings, subgroup may not show, or be invitation only. Invitation to a subgroup can also be sent to a member's email address. In which the member would need to go that email and click the "Join Subgroup's name" button. 
+

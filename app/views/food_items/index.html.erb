@@ -1,0 +1,49 @@
+<p style="color: green"><%= notice %></p>
+ <%# <%= link_to "New food item", new_food_item_path, class: 'button' %> 
+<% content_for :title, "Food items" %>  
+
+
+<table class="fooditems-container">
+  <% @foods.each do |food| %>
+    <thead style="height:70%; display:flex;flex-flow:row wrap; align-items:start; justify-content:center;">
+      <tr>
+        <th>
+    <div class="dropdown no-pmb">
+    <div class="dropdown-trigger no-pmb" data-controller="toggledropdown addToOrder"> <%# Connect Stimulus controller to the food container %>
+      <button class="button toggle-button" data-action="click->toggledropdown#toggle mouseover->toggledropdown#mouseEnter mouseout->toggledropdown#mouseLeave"  data-toggledropdown-target="button">
+        <figure>
+          <%= image_tag food.image, class:'image is-64x64' %>
+          <figcaption>
+            <%= food.category %>
+          </figcaption>
+        </figure>
+      </button> <%# Button to toggle food items %>
+      <div data-toggledropdown-target="foodItems" class="is-hidden dropdown-menu category-button"> <%# Food items div, initially hidden %>
+        <% @food_items.each do |item| %>
+          <% if item.category == food.category %>
+            <div class="category-dropdown dropdown-content no-pmb">
+              <div class="dropdown no-pmb">
+                <div class="dropdown-trigger no-pmb" data-controller="toggledropdown addToOrder">
+                <button class="button is-small dropdown-item no-pmb" data-action="click->toggledropdown#toggleItem" data-toggledropdown-target="button">
+                  <%= item.name %>
+                  <%# <%= link_to "#{item.name}", food_item_path(item.id), class: 'button is-light is-small' %> 
+                </button> <%# Button to toggle food item's options    %>
+                <div data-toggledropdown-target="foodOptions" class="is-hidden">
+                <button data-controller="toggledropdown" data-toggledropdown-toggleItem-class="toggled-background" class="normal-background is-small dropdown-item no-pmb" style="display:flex;flex-direction:column;">
+                  <%= link_to "Add a #{item.name} To Order", data:{action: "click->addToOrder#addOrder"}, class: 'button add-to-order is-light is-small' %>
+                  <%# link_to "Condiments to your #{item.name}" %>
+              </button>
+              </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    </div>
+        </th>
+      </tr>
+    </thead>
+    <% end %>
+  </div>
+</table>

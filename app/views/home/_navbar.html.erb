@@ -1,0 +1,42 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <%= image_tag('raven.png', class:'image is-64x64') %>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <%= link_to "Home", root_path , class:'navbar-item' %>
+      <%= link_to "Menu", foods_path, class:'navbar-item' %>
+      <%= link_to "lunch", sections_sections_path(section: "lunch"), class:'navbar-item' %>
+      <%= link_to "desert", sections_sections_path(section: "desert"), class:'navbar-item' %>
+      <%= link_to "drinks", sections_sections_path(section: "drinks"), class:'navbar-item' %>
+
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <span style="display:flex;flex-row:row wrap;">
+            <%- if controller_name != 'sessions' %>
+              <%= link_to 'Log Out', 'sign_out', method: :delete, class:'button is-danger'%>
+                <% else %>
+                  <%= link_to 'Sign Up', 'sign_up', method: :get, class:'button is-primary'%>
+                  <%= link_to 'Log In', 'sign_in', method: :get, class:'button is-secondary'%>                  
+            <% end %>
+          </span>
+          <%# if user_signed_in?%>
+            <%# end %>
+          <%# end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

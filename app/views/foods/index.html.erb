@@ -1,0 +1,14 @@
+<div class="container foodscontainer">
+  <p style="color: green">
+    <%= notice %>
+    
+  </p>  
+  <%= @user_association %>
+  <% @foods.each do |t| %>
+  <div style="display: flex;flex-flow: column;gap:1em; align-items: center; justify-content:center;">
+      <%= t.category%>
+    <%= image_tag t.image, class:'image is-128x128' %>
+  </div>
+
+  <% end %>
+</div>
